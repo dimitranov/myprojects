@@ -1,0 +1,125 @@
+.event_input{
+      width: 98.3%;
+      height: 35px;
+      box-sizing: border-box;
+      padding: 0 10px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      outline: none;
+      margin: 0px 5px 10px 5px;
+      transition: 300ms;
+      border: 1px solid rgba(0, 0, 0, 0.17);
+}
+.event_input:focus{
+  transition: 300ms;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.event_input::placeholder{
+  color: #fff;
+}
+.event_input_button,.cancel_button{
+      border-radius: 5px ;
+      background-color: rgba(35, 222, 125, 0.60);
+      color: #fff;
+      border: none;
+      margin: 0px 15px;
+      outline: none;
+      padding: 10px 40px;
+      transition: 300ms;
+}
+.cancel_button{
+  background-color: rgba(255, 0, 0, 0.43);
+  color: rgba(252, 252, 252, 0.85);
+  transition: 300ms;
+}
+.cancel_button:hover{
+  background-color: rgba(255, 0, 0, 0.7);
+transition: 300ms;
+cursor: pointer;
+}
+.event_input_button:hover{
+  transition: 300ms;
+  cursor: pointer;
+  background-color: rgba(35, 222, 125, 0.80);
+}
+.addEvent_container{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 200px;
+  justify-content: center;
+  width: 100%;
+  animation: animate_in 300ms ease-out 1 forwards;
+
+}
+@keyframes animate_in {
+  0%{
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100%{
+    opacity:1;
+  transform: scale(1);
+  }
+}
+.addEvent_Wraper{
+  width: 45%;
+  display: flex;
+  padding: 15px 10px;
+  background-color: rgba(228, 228, 228, 0.35);
+
+  flex-flow: column;
+  border-radius: 5px;
+}
+.DnT_input_container{
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+
+}
+.add_event_btn_container{
+  display: flex;
+  width: 100%;
+  margin-bottom: 300px;
+  justify-content: center;
+
+}
+.DnT_inputs{
+
+  text-align: center;
+}
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+input[type="time"]::-webkit-inner-spin-button {
+    margin-top: 7px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+@media only screen and (max-width :800px) {
+  .eventsContainer {
+      width: 65%;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .event_input{
+        width: 50%;
+      }
+
+
+.event_input{
+     width: 65%;
+   }
+
+  .addEvent_Wraper {
+    width: 85%;
+  }
+  .event_input{
+    width: 97%;
+  }
+  .eventsContainer {
+      width: 95%;
+  }
+}

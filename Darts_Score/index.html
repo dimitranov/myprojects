@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>WatchesStyle-Brands</title>
+    <meta charset="utf-8" name="viewport" content="width=320, initial-scale=1" />
+    <link rel="icon" href="icon-page.png" type="image/png" sizes="16x16">
+    <script
+              src="https://code.jquery.com/jquery-2.2.4.js"
+              ></script>
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300|Megrim|Open+Sans|Roboto+Condensed:300|Josefin+Sans:300|Roboto:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://fb.me/react-15.0.0.js"></script>    
+    <script src="https://fb.me/react-dom-15.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+            
+
+            <script type="text/babel" src="store.js"></script>
+            
+
+            
+
+            <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+<header>
+	
+
+
+</header>
+
+
+<div class="name-input-container">
+	<p >Enter Player 1 name:</p>
+	<input type="text" id="player1-input" class="name-input">
+	<p >Enter Player 2 name:</p>
+	<input type="text" id="player2-input" class="name-input">
+	<button class="button-input-name close-btn-red-bg" id="name-btn-close">CLOSE</button><button class="button-input-name" id="name-btn-add">ADD</button>
+</div>
+<div class="score-contrainer">
+	<div class="player-wraper">
+		<p class="player-name" id="player1-name">Player 1</p>
+		<p class="legs">Legs: <span id="Leg_of_player1">0</span></p>
+		<div class="player-score-warper">
+			<p class="player-score-points" id="player1-score-points"></p>
+		</div>
+		<p class="checkouts" id="checkouts1"></p>
+		
+	</div>
+	<div class="player-wraper">
+		<p class="player-name" id="player2-name">Player 2</p>
+		<p class="legs">Legs: <span id="Leg_of_player2">0</span></p>
+		<div class="player-score-warper">
+			<p class="player-score-points no-on-turn" id="player2-score-points"></p>
+		</div>
+		<p class="checkouts" id="checkouts2"></p>
+		
+	</div>
+
+</div>
+
+<div class="buttons-conteiner">
+	
+	<div class="single-div redo-btn" id="redo-btn"><p>STATS</p></div>
+	<div class="single-div number"><p>SCORE:</p></div>
+	<div class="single-div socre-value" ><p id="score-turn"></p></div>
+	<div class="single-div number" id="number7"><p>7</p></div>
+	<div class="single-div number" id="number8"><p>8</p></div>
+	<div class="single-div number" id="number9"><p>9</p></div>
+	<div class="single-div number" id="number4"><p>4</p></div>
+	<div class="single-div number" id="number5"><p>5</p></div>
+	<div class="single-div number" id="number6"><p>6</p></div>
+	<div class="single-div number" id="number1"><p>1</p></div>
+	<div class="single-div number" id="number2"><p>2</p></div>
+	<div class="single-div number" id="number3"><p>3</p></div>
+	<div class="single-div delete-btn" id="delete"><p>DEL</p></div>
+	<div class="single-div number" id="number0"><p>0</p></div>
+	<div class="single-div ok-btn" id="ok-btn"><p>OK</p></div>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+$(function () {
+	
+$(document).ready(function () {
+	var player1Score =  501; //501
+	var player2Score =  501;	//501
+	var score = "";
+	var switcher = false;
+	var Leg_of_player1 = 0;
+	var Leg_of_player2 = 0;
+	document.getElementById('Leg_of_player1').innerHTML = Leg_of_player1;
+	document.getElementById('Leg_of_player2').innerHTML = Leg_of_player2;
+
+$("#player1-score-points").text(player1Score);
+		$("#player2-score-points").text(player2Score);
+	function updateScore () {
+		$("#player1-score-points").text(player1Score);
+		$("#player2-score-points").text(player2Score);
+		$("#score-turn").text("");
+	}
+	function newLeg() {
+		TochkiZaMahane=0;
+
+	player1Score=501; // 501
+player2Score=501;//501
+document.getElementById('checkouts1').innerHTML = "";
+document.getElementById('checkouts2').innerHTML = "";
+
+		updateScore ();
+	}
+
+function newGame(){
+newLeg();
+updateScore();
+Leg_of_player1 = 0;
+Leg_of_player2 = 0;
+document.getElementById('Leg_of_player1').innerHTML = Leg_of_player1;
+	document.getElementById('Leg_of_player2').innerHTML = Leg_of_player2;
+}
+
+// $("#redo-btn").click(newGame);
+
+$("#number1").click(function () {
+	document.getElementById('score-turn').innerHTML += "1";
+});
+$("#number2").click(function () {
+	document.getElementById('score-turn').innerHTML += "2";
+});
+$("#number3").click(function () {
+	document.getElementById('score-turn').innerHTML += "3";
+});
+$("#number4").click(function () {
+	document.getElementById('score-turn').innerHTML += "4";
+});
+$("#number5").click(function () {
+	document.getElementById('score-turn').innerHTML += "5";
+});
+$("#number6").click(function () {
+	document.getElementById('score-turn').innerHTML += "6";
+});
+$("#number7").click(function () {
+	document.getElementById('score-turn').innerHTML += "7";
+});
+$("#number8").click(function () {
+	document.getElementById('score-turn').innerHTML += "8";
+});
+$("#number9").click(function () {
+	document.getElementById('score-turn').innerHTML += "9";
+});
+$("#number0").click(function () {
+	document.getElementById('score-turn').innerHTML += "0";
+});
+
+	
+$("#ok-btn").click(function () {
+	
+	var TochkiZaMahane;
+	var ScoreHTML = document.getElementById('score-turn').innerHTML;
+	
+
+	if (!switcher ) {
+		
+		TochkiZaMahane = (ScoreHTML=="") ? ScoreHTML == -1 : parseInt(ScoreHTML);
+		
+		if (TochkiZaMahane <= 180) {
+			player1Score = player1Score - TochkiZaMahane;
+			console.log("TochkiZaMahane "  + TochkiZaMahane + "  " + " player1Score "+ player1Score);
+			if (ScoreHTML!=="") {
+				$("#player2-score-points").removeClass("no-on-turn");
+				$("#player1-score-points").addClass("no-on-turn");
+				switcher = true;
+			}if(player1Score==0){
+				newLeg();
+				Leg_of_player1 +=1;
+				document.getElementById('Leg_of_player1').innerHTML = Leg_of_player1 ;
+				if(document.getElementById('Leg_of_player1').innerHTML  == 3){
+					alert($("#player1-name").text() + " Wins \n New game Started" );
+					newGame();
+				}
+			}
+			updateScore();
+			Checkouts1();
+
+			console.log("1");
+			
+			return;
+			}else{
+			ScoreHTML="";
+			alert("Error");
+
+			
+		}
+	} 
+
+
+
+
+	if (switcher ){
+		TochkiZaMahane = (ScoreHTML=="") ? ScoreHTML == -1 : parseInt(ScoreHTML);
+
+		if (TochkiZaMahane <= 180) {
+			player2Score = player2Score - TochkiZaMahane;
+			console.log("TochkiZaMahane "  + TochkiZaMahane + "  " + " player2Score "+ player2Score);
+			if (ScoreHTML!=="") {
+				$("#player1-score-points").removeClass("no-on-turn");
+				$("#player2-score-points").addClass("no-on-turn");
+				switcher = false;
+			}if(player2Score==0){
+				newLeg();
+				Leg_of_player2 +=1;
+				document.getElementById('Leg_of_player2').innerHTML = Leg_of_player2;
+				if(document.getElementById('Leg_of_player2').innerHTML  == 3){
+					alert($("#player2-name").text() + " Wins\n New game Started");
+					newGame();
+				}
+			}
+			updateScore();
+			Checkouts2();
+
+
+			console.log("2");
+			
+			return;
+		}else{
+			ScoreHTML="";
+			alert("Error");
+		}
+		
+
+
+
+
+		}
+		
+});
+
+
+
+
+$("#delete").click(function function_name() {
+		
+	$("#score-turn").text("");
+});
+
+
+
+function Checkouts1() {
+	
+for(var i = 0 ; i <= dataCheckout.length - 1; i++){
+		if (player1Score == dataCheckout[i].to_checkout) {
+			document.getElementById('checkouts1').innerHTML = dataCheckout[i].needed;
+		}
+		
+	}
+}
+function Checkouts2() {
+	
+for(var i = 0 ; i <= dataCheckout.length - 1; i++){
+		if (player2Score == dataCheckout[i].to_checkout) {
+			document.getElementById('checkouts2').innerHTML = dataCheckout[i].needed;
+		}
+		
+	}
+}
+
+
+
+
+	$(".name-input-container").hide();
+
+
+$("#name-btn-close").click(function () {
+	$(".name-input-container").hide();
+});
+
+$(".player-name").bind("click", function () {
+	$(".name-input-container").show();
+});
+
+$("#name-btn-add").click(function () {
+	if ($("#player1-input").val() !== "") {
+		$("#player1-name").text($("#player1-input").val());
+	}else{
+		$("#player1-name").text("Player1");
+	}
+	if ($("#player2-input").val() !== "") {
+		$("#player2-name").text($("#player2-input").val());
+	}else{
+		$("#player2-name").text("PLayer2");
+	}
+
+
+	$(".name-input-container").hide();
+
+});
+
+
+
+
+});});
+
+
+
+var dataCheckout =[
+
+{
+	'to_checkout':'170',
+	'needed':' T20, T20, DB'
+},
+{
+	'to_checkout':'169',
+	'needed':'None'
+},
+{
+	'to_checkout':'168 ',
+	'needed':'None'
+},
+{
+	'to_checkout':'167 ',
+	'needed':'T20, T19, DB'
+},
+{
+	'to_checkout':'166 ',
+	'needed':'None'
+},
+{
+	'to_checkout':'166',
+	'needed':'None'
+},
+{
+	'to_checkout':'165',
+	'needed':'None'
+},
+{
+	'to_checkout':'164',
+	'needed':'T20, T18, DB'
+},
+{
+	'to_checkout':'163',
+	'needed':'None'
+},
+{
+	'to_checkout':'162',
+	'needed':'None'
+},
+{
+	'to_checkout':'161 ',
+	'needed':'T20, T17, DB'
+},
+{
+	'to_checkout':'160',
+	'needed':'T20, T20, D20'
+},
+{
+	'to_checkout':'159',
+	'needed':'None'
+},
+{
+	'to_checkout':'158',
+	'needed':'T20, T20, D19'
+},
+{
+	'to_checkout':'157',
+	'needed':'T20, T19, D20'
+},
+{
+	'to_checkout':'156',
+	'needed':'T20, T20, D18'
+},
+{
+	'to_checkout':'155',
+	'needed':'T20, T15, DB'
+},
+{
+	'to_checkout':'154',
+	'needed':'T20, T18, D20'
+},
+{
+	'to_checkout':'153',
+	'needed':'T20, T19, D18'
+},
+{
+	'to_checkout':'152',
+	'needed':'T20, T20, D16'
+},
+{
+	'to_checkout':'151',
+	'needed':'T20, T17, D20'
+},
+{
+	'to_checkout':'150',
+	'needed':'T20, T18, D18'
+},
+{
+	'to_checkout':'149',
+	'needed':'T20, T19, D16'
+},
+{
+	'to_checkout':'148',
+	'needed':'T20, T16, D20'
+},
+{
+	'to_checkout':'147',
+	'needed':'T20, T17, D18'
+},
+{
+	'to_checkout':'146',
+	'needed':'T20, T18, D16'
+},
+{
+	'to_checkout':'145',
+	'needed':'T20, T15, D20'
+},
+{
+	'to_checkout':'144',
+	'needed':'T20, T20, D12'
+},
+{
+	'to_checkout':'143',
+	'needed':'T20, T17, D16'
+},
+{
+	'to_checkout':'142',
+	'needed':'T20, T14, D20'
+},
+{
+	'to_checkout':'141',
+	'needed':'T20, T15, D18'
+},
+
+{
+	'to_checkout':'140',
+	'needed':' T20, T16, D16'
+},
+{
+	'to_checkout':'139',
+	'needed':'T20, T13, D20'
+},
+{
+	'to_checkout':'138',
+	'needed':'T20, T14, D18'
+},
+{
+	'to_checkout':'137',
+	'needed':'T17, T18, D16'
+},
+{
+	'to_checkout':'136',
+	'needed':'T20, T20, D8'
+},
+{
+	'to_checkout':'135',
+	'needed':' T20, T15, D15'
+},
+{
+	'to_checkout':'134',
+	'needed':'T20, T14, D16'
+},
+{
+	'to_checkout':'133',
+	'needed':'T20, T19, D8'
+},
+{
+	'to_checkout':'132',
+	'needed':'T20, T20, D6'
+},
+{
+	'to_checkout':'131',
+	'needed':'T20, T13, D16'
+},
+{
+	'to_checkout':'130',
+	'needed':'T20, T18, D8'
+},
+{
+	'to_checkout':'129',
+	'needed':'T19, T20, D6'
+},
+{
+	'to_checkout':'218',
+	'needed':'T18, T14, D16'
+},
+{
+	'to_checkout':'127',
+	'needed':'T19, T18, D8'
+},
+{
+	'to_checkout':'126',
+	'needed':'T19, T19, D6'
+},
+{
+	'to_checkout':'125',
+	'needed':'B, T20, D20'
+},
+{
+	'to_checkout':'124',
+	'needed':'T20, D16, D16'
+},
+{
+	'to_checkout':'123',
+	'needed':'T19, T16, D9'
+},
+{
+	'to_checkout':'122',
+	'needed':'T18, T20, D4'
+},
+{
+	'to_checkout':'121',
+	'needed':'T20, T15, D8'
+},
+{
+	'to_checkout':'120',
+	'needed':'T20, 20, D20'
+},
+{
+	'to_checkout':'119',
+	'needed':'T19, T10, D16'
+},
+{
+	'to_checkout':'118',
+	'needed':'T20, 18, D20'
+},
+{
+	'to_checkout':'117',
+	'needed':'T20, 17, D20'
+},
+{
+	'to_checkout':'116',
+	'needed':' T20, 16, D20'
+},
+{
+	'to_checkout':'115',
+	'needed':'T20, 15, D20'
+},
+{
+	'to_checkout':'114',
+	'needed':'T20, 14, D20'
+},
+{
+	'to_checkout':'113',
+	'needed':'T20, 13, D20'
+},
+{
+	'to_checkout':'112',
+	'needed':'T20, 20, D16'
+},
+{
+	'to_checkout':'111',
+	'needed':'T20, 19, D16'
+},
+{
+	'to_checkout':'110',
+	'needed':'T20, 18, D16'
+},
+{
+	'to_checkout':'109',
+	'needed':'T20, 17, D16'
+},
+{
+	'to_checkout':'108',
+	'needed':'T20, 16, D16'
+},
+{
+	'to_checkout':'107',
+	'needed':'T19, 18, D16'
+},
+{
+	'to_checkout':'106',
+	'needed':'T20, 14, D16'
+},
+{
+	'to_checkout':'105',
+	'needed':'T20, 13, D16'
+},
+{
+	'to_checkout':'104',
+	'needed':'T18, 18, D16'
+},
+
+{
+	'to_checkout':'103',
+	'needed':'T20, 11, D16'
+},
+
+{
+	'to_checkout':'102',
+	'needed':'T20, 10, D16'
+},
+
+{
+	'to_checkout':'101',
+	'needed':'T17 18, D16'
+},
+
+{
+	'to_checkout':'100',
+	'needed':'T20, D20'
+},
+
+{
+	'to_checkout':'99',
+	'needed':'T19, 10, D16'
+},
+
+{
+	'to_checkout':'98',
+	'needed':'T20, D19'
+},
+
+{
+	'to_checkout':'97',
+	'needed':'T19, D20'
+},
+
+{
+	'to_checkout':'96',
+	'needed':'T20, D18'
+},
+
+{
+	'to_checkout':'95',
+	'needed':'T15, 18, D16'
+},
+
+{
+	'to_checkout':'94',
+	'needed':'T18, D20'
+},
+
+{
+	'to_checkout':'93',
+	'needed':'T19, D18'
+},
+
+{
+	'to_checkout':'92',
+	'needed':'T20, D16'
+},
+
+{
+	'to_checkout':'91',
+	'needed':'T17, D20'
+},
+
+{
+	'to_checkout':'90',
+	'needed':'T18, D18'
+},
+
+{
+	'to_checkout':'89',
+	'needed':'T19, D16'
+},
+
+{
+	'to_checkout':'88',
+	'needed':'T16, D20'
+},
+
+{
+	'to_checkout':'87',
+	'needed':' T17, D18'
+},
+
+{
+	'to_checkout':'86',
+	'needed':'T18, D16'
+},
+
+{
+	'to_checkout':'85',
+	'needed':'T15, D20'
+},
+
+{
+	'to_checkout':'84',
+	'needed':'T20, D12'
+},
+
+{
+	'to_checkout':'83',
+	'needed':'T17, D16'
+},
+
+{
+	'to_checkout':'82',
+	'needed':'T14, D20'
+},
+
+{
+	'to_checkout':'81',
+	'needed':'T15, D18'
+},
+
+{
+	'to_checkout':'80',
+	'needed':'T16, D16'
+},
+
+{
+	'to_checkout':'79',
+	'needed':'T13, D20'
+},
+
+{
+	'to_checkout':'78',
+	'needed':'T14, D18'
+},
+
+{
+	'to_checkout':'77',
+	'needed':'T15, D16'
+},
+
+{
+	'to_checkout':'76',
+	'needed':'T20, D8'
+},
+
+{
+	'to_checkout':'75',
+	'needed':'T15, D15'
+},
+
+{
+	'to_checkout':'74',
+	'needed':'T14, D16'
+},
+
+{
+	'to_checkout':'73',
+	'needed':'T19, D8'
+},
+
+{
+	'to_checkout':'72',
+	'needed':'T20, D6'
+},
+
+{
+	'to_checkout':'71',
+	'needed':'T13, D16'
+},
+{
+	'to_checkout':'70',
+	'needed':'T18, D8'
+},
+{
+	'to_checkout':'69',
+	'needed':'T19, D6'
+},
+{
+	'to_checkout':'68',
+	'needed':'T16, D10'
+},
+{
+	'to_checkout':'67',
+	'needed':'T17, D8'
+},
+{
+	'to_checkout':'66',
+	'needed':'T10, D18'
+},
+{
+	'to_checkout':'65',
+	'needed':'T15, D10'
+},
+{
+	'to_checkout':'64',
+	'needed':'D16, D16'
+},
+{
+	'to_checkout':'63',
+	'needed':'T13, D12'
+},
+{
+	'to_checkout':'62',
+	'needed':'T10, D16'
+},
+{
+	'to_checkout':'61',
+	'needed':'T15, D8'
+},
+{
+	'to_checkout':'60',
+	'needed':'20, D20'
+},
+{
+	'to_checkout':'59',
+	'needed':'19, D20'
+},
+{
+	'to_checkout':'58',
+	'needed':'18, D20'
+},
+{
+	'to_checkout':'57',
+	'needed':'17, D20'
+},
+{
+	'to_checkout':'56',
+	'needed':'16, D20'
+},
+{
+	'to_checkout':'55',
+	'needed':'15, D20'
+},
+{
+	'to_checkout':'54',
+	'needed':'14, D20'
+},
+{
+	'to_checkout':'53',
+	'needed':'13, D20'
+},
+{
+	'to_checkout':'52',
+	'needed':'20, D16'
+},
+{
+	'to_checkout':'51',
+	'needed':'19, D16'
+},
+{
+	'to_checkout':'50',
+	'needed':'18, D16'
+},
+{
+	'to_checkout':'49',
+	'needed':'17, D16'
+},
+{
+	'to_checkout':'48',
+	'needed':'16, D16'
+},
+{
+	'to_checkout':'47',
+	'needed':'15, D16'
+},
+{
+	'to_checkout':'46',
+	'needed':'14, D16'
+},
+{
+	'to_checkout':'45',
+	'needed':'13, D16'
+},
+{
+	'to_checkout':'44',
+	'needed':'12, D16'
+},
+{
+	'to_checkout':'43',
+	'needed':'11, D16'
+},
+{
+	'to_checkout':'42',
+	'needed':'10, D16'
+},
+{
+	'to_checkout':'41',
+	'needed':'9, D16'
+},
+{
+	'to_checkout':'40',
+	'needed':'D20'
+},
+{
+	'to_checkout':'39',
+	'needed':'S3, D18'
+},
+{
+	'to_checkout':'38',
+	'needed':'D19'
+},
+{
+	'to_checkout':'37',
+	'needed':'S5, D16'
+},
+{
+	'to_checkout':'36',
+	'needed':'D18'
+},
+{
+	'to_checkout':'35',
+	'needed':'S3, D16'
+},
+{
+	'to_checkout':'34',
+	'needed':'D17'
+},
+{
+	'to_checkout':'33',
+	'needed':' S3, D15'
+},
+{
+	'to_checkout':'32',
+	'needed':'D16'
+},
+{
+	'to_checkout':'31',
+	'needed':'S15, D8'
+},
+{
+	'to_checkout':'30',
+	'needed':'D15'
+},
+{
+	'to_checkout':'29',
+	'needed':'S13, D8'
+},
+{
+	'to_checkout':'28',
+	'needed':'D14'
+},
+{
+	'to_checkout':'27',
+	'needed':'S7, D10'
+},
+{
+	'to_checkout':'26',
+	'needed':'D13'
+},
+{
+	'to_checkout':'25',
+	'needed':'S17, D4'
+},
+{
+	'to_checkout':'24',
+	'needed':'D12'
+},
+{
+	'to_checkout':'23',
+	'needed':'S7, D8'
+},
+{
+	'to_checkout':'22',
+	'needed':'D11'
+},
+{
+	'to_checkout':'21',
+	'needed':'S17, D2'
+},
+{
+	'to_checkout':'20',
+	'needed':'D10'
+},
+{
+	'to_checkout':'19',
+	'needed':'S11, D4'
+},
+{
+	'to_checkout':'18',
+	'needed':'D9'
+},
+{
+	'to_checkout':'17',
+	'needed':'S9, D4'
+},
+{
+	'to_checkout':'16',
+	'needed':'D8'
+},
+{
+	'to_checkout':'15',
+	'needed':' S7, D4'
+},
+{
+	'to_checkout':'14',
+	'needed':'10 , D2'
+},
+{
+	'to_checkout':'13',
+	'needed':'3 ,D5'
+},
+{
+	'to_checkout':'12',
+	'needed':'D6'
+},
+{
+	'to_checkout':'11',
+	'needed':'1, D5'
+},
+{
+	'to_checkout':'10',
+	'needed':'D5'
+},
+{
+	'to_checkout':'9',
+	'needed':'1, D4'
+},
+{
+	'to_checkout':'8',
+	'needed':'D4'
+},
+{
+	'to_checkout':'7',
+	'needed':'3 , D2'
+},
+{
+	'to_checkout':'6',
+	'needed':'D3'
+},
+{
+	'to_checkout':'5',
+	'needed':'1, D2'
+},
+{
+	'to_checkout':'4',
+	'needed':'D2'
+},
+{
+	'to_checkout':'3',
+	'needed':'1, D1'
+},
+{
+	'to_checkout':'2',
+	'needed':'D1'
+}
+
+ 
+];
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	body,p,div,span{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	}
+	.name-input-container{
+		position: absolute;
+		top: 30px;
+		width: 90%;
+		height: 300px;
+		left: 5%;
+		text-align: center;
+		z-index: 3;
+		background-color: white;
+		box-shadow: 0 0 80px 50px black;
+	}
+	.name-input-container p{text-align: center;
+font-size: 24px;
+font-family: arial;
+margin: 10px;
+}
+.name-input{
+	margin: 15px 10% 15px 10%;
+width: 80%;
+height: 34px;
+text-align: center;
+font-size: 20px;
+outline: none;
+border: 1px solid #180d0d;
+border-radius: 6px;
+color: #271e1ee6;
+}
+	.score-contrainer{
+		height: 200px;
+
+	}
+	.player-wraper{
+text-align: center;
+    width: 50%;
+    float: left;
+	}
+	.player-score-points{
+		font-family: arial;
+		font-size: 60px;
+		margin-top: 10px;
+		text-shadow: 2px 2px 2px #bdb8b8;
+	}
+.player-name{
+	    font-size: 21px;
+    font-family: arial;
+    margin: 0;
+    height: 40px;
+    color: white;
+    
+background: #09142d; 
+background: -moz-linear-gradient(top, #09142d 0%, #714077 100%, #2989d8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #09142d 0%,#714077 100%,#2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #09142d 0%,#714077 100%,#2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09142d', endColorstr='#2989d8',GradientType=0 ); /* IE6-9 */
+    padding-top: 7px;
+}
+
+.buttons-conteiner{
+background-color: #23081d;
+    height: 324px;
+}
+.single-div{
+        display: inline-block;
+    float: left;
+    width: 33.333%;
+    /* border: 1px solid; */
+    font-family: 'Roboto', sans-serif;
+   
+    height: 65px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    outline: none;
+    padding-top: 23px;
+}
+.redo-btn{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#931d45+0,714077+100,2989d8+100 */
+background: #931d45; /* Old browsers */
+background: -moz-linear-gradient(top, #931d45 0%, #714077 100%, #2989d8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #931d45 0%,#714077 100%,#2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #931d45 0%,#714077 100%,#2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#931d45', endColorstr='#2989d8',GradientType=0 ); /* IE6-9 */
+}
+.number{
+	    background-color: rgb(35, 8, 29);
+}
+.socre-value{
+	background-color: white;
+	text-shadow: 2px 2px 2px #bdb8b8;
+	color: black;
+}
+.ok-btn{
+	    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e9638+0,38a5a3+100,1c9686+100 */
+background: #1e9638; /* Old browsers */
+background: -moz-linear-gradient(top, #1e9638 0%, #38a5a3 100%, #1c9686 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #1e9638 0%,#38a5a3 100%,#1c9686 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #1e9638 0%,#38a5a3 100%,#1c9686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e9638', endColorstr='#1c9686',GradientType=0 ); /* IE6-9 */
+	}
+.ok-btn-clicked{
+	background-color: red;
+}
+.delete-btn{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a02a20+2,bf8a41+100,1c9686+100 */
+background: #a02a20; /* Old browsers */
+background: -moz-linear-gradient(top, #a02a20 2%, #bf8a41 100%, #1c9686 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #a02a20 2%,#bf8a41 100%,#1c9686 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #a02a20 2%,#bf8a41 100%,#1c9686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a02a20', endColorstr='#1c9686',GradientType=0 ); /* IE6-9 */
+}
+.no-on-turn{
+	opacity: 0.5;
+
+	transition: 0.3s;
+}
+.socre-value{
+	font-size: 35px;
+    padding-top: 11px;
+    box-sizing: border-box;
+    font-family: arial;
+    
+}
+.checkouts{
+	font-size: 20px;
+font-family: arial;
+color: #000;
+}
+.button-input-name{
+	width: 50%;
+position: relative;
+height: 66px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e9638+0,38a5a3+100,1c9686+100 */
+background: #1e9638; /* Old browsers */
+background: -moz-linear-gradient(top, #1e9638 0%, #38a5a3 100%, #1c9686 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #1e9638 0%,#38a5a3 100%,#1c9686 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #1e9638 0%,#38a5a3 100%,#1c9686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e9638', endColorstr='#1c9686',GradientType=0 ); /* IE6-9 */
+border: none;display: inline-block;
+float: left;
+font-size: 20px;
+color: white;
+}
+.close-btn-red-bg{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a02a20+2,bf8a41+100,1c9686+100 */
+background: #a02a20; /* Old browsers */
+background: -moz-linear-gradient(top, #a02a20 2%, #bf8a41 100%, #1c9686 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #a02a20 2%,#bf8a41 100%,#1c9686 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #a02a20 2%,#bf8a41 100%,#1c9686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a02a20', endColorstr='#1c9686',GradientType=0 ); /* IE6-9 */
+}
+.legs{
+	
+	margin-top: 10px;
+font-size: 18px;
+font-family: arial;
+}
+</style>
+</html>
+
+
