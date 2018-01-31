@@ -1,0 +1,49 @@
+@media only screen and (min-width : 320px) {
+  .start_page_game_title{
+    margin: 0;
+    margin-bottom: 50px;
+    padding-top: 60px;
+    font-size: 35px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.67);
+    color: white;
+    text-align: center;
+  }
+  .start_page_btn{
+    border: none;
+    background-color: white;
+    border-radius: 82px;
+    color: #c77b9f;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.43);
+    font-family: 'Delius Unicase', cursive;
+  }
+  .start_page_play_btn{
+    font-size: 34px;
+    padding: 12px 34px;
+  }
+
+  .score_n_screator_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+    padding-top: 50px;
+  }
+  .start_page_btn_secondary{
+    font-size: 17px;color: #d1466f;
+    padding: 12px 24px;
+  }
+}
+@media only screen and (min-width : 360px) {
+  .start_page_game_title{
+    font-size: 45px;
+  }
+  .start_page_play_btn{
+    font-size: 40px;
+    padding: 12px 44px;
+  }
+  .start_page_btn_secondary{
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+
+}

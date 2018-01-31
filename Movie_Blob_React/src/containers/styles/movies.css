@@ -1,0 +1,135 @@
+@media only screen and (min-width : 320px) {
+
+
+    /*UX*/
+    /* .movie_come_in_place{
+      transform: scale(1) !important;
+      opacity: 1 !important;
+      transition: 200ms !important;
+    }
+    .movie_holder_unvisible{
+        transform: scale(0.8);
+        opacity: 0;
+    } */
+
+    /*UX*/
+    .movies_container{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap;
+  }
+  .movie_holder_link_parent{
+    width: 46%;
+    margin: 6px;
+    position: relative;
+  }
+  .movie_holder_link{
+    width: 46%;
+    text-decoration: none;
+    color: white;
+    margin: 6px;
+
+
+  }
+  .movie_holder{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.54);
+    width: 100%;
+    color: #222;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: white;
+    transition: 200ms !important;
+
+
+  }
+  .movie_holder:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0px 0px 10px 0 #000000;
+  }
+  .movie_holder_img{
+    width: 100%;
+    transition: 200ms;
+  }
+  .movie_holder_img:hover{
+    width: 200%;
+  }
+  .movie_holder_title{
+    margin: 3px 0 40px 0;
+    padding: 0 4%
+  }
+  .movie_holder_rates{
+    font-size: 0.8em;
+    text-align: left;
+    padding-left: 5%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .movie_holder_rates img{
+    width: 10%;
+  }
+  .release_date_p{
+    position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      color: white;
+      padding: 2px 0;
+      text-align: center;
+      box-shadow: 0 0 3px black;
+      font-size: 0.8em;
+      background-color: rgb(242, 136, 25);
+  }
+  .creator_pick{
+    background-color: rgb(171, 7, 27);
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+
+@media only screen and (min-width : 768px) {
+  .movies_container_wrapter{
+    justify-content: center;
+    display: flex;
+    padding: 0 15%;
+  }
+  .movie_holder_link,.movie_holder_link_parent {
+    width: 31%;
+  }
+
+}
+
+
+
+@media only screen and (min-width : 1024px) {
+  .movie_holder_link ,.movie_holder_link_parent {
+      width: 23%;
+  }
+  .movies_container{
+    width: 100%;
+  }
+
+}
+@media only screen and (min-width : 1280px) {
+  .movie_holder_link ,.movie_holder_link_parent {
+      width: 18%;
+  }
+}
+
+
+
+@media only screen and (min-width : 1366px) {
+  .movies_container_wrapter{
+      padding: 0 20%;
+  }
+}

@@ -1,0 +1,357 @@
+@media only screen and (min-width : 320px) {
+  .separator_wraper,.separator_wraper_line{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+  }
+  .separator{
+    width: 80%;
+    position: relative;
+  }
+  .separator::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;border-radius: 2px;
+    height: 2px;
+    background:linear-gradient(to right, rgb(105, 206, 172) 0%, rgb(249, 51, 41) 50%, rgb(235, 164, 2) 100%);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.33);
+  }
+  .dot_separator{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+      border-radius: 50%;
+  }
+  .dot_separator::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 50%;
+      height: 100%;
+      background:linear-gradient(45deg, rgb(105, 206, 172) 0%, rgb(249, 51, 41) 50%, rgb(235, 164, 2) 100%);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.43);
+  }
+  .jumbotron{
+    width: 100%;
+
+  }
+  .logo_container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  .home_logo{
+    width: 60%;
+    text-align: center;
+  }
+  .welcome_to_p{
+    font-size: 1.4em;
+    font-family: 'Bungee', cursive;
+      text-align: center;
+      margin-bottom: 0;
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+
+  .app_main_title{
+    font-size: 2.6em;
+    padding: 0 5%;
+    transform: scale(0.7);
+    opacity: 0;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    background: linear-gradient(to right, rgb(105, 206, 172) 0%, rgb(249, 51, 41) 50%, rgb(235, 164, 2) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px black);
+  }
+
+  .app_introduction,.jumpotron_explanation{
+    font-size: 0.9em;
+    padding: 0 8%;
+    letter-spacing: 0.4px;
+    text-align: center;
+    margin-top: 0;
+    opacity: 0;
+  }
+  .jumpotron_explanation{
+    opacity: 1;
+  }
+  .jumbotron_section{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  .jumpotron_section_container{
+    width: 90%;
+    height: initial;
+    border: 2px solid rgba(255, 255, 255, 0.50);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.34);
+    padding-bottom: 20px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 23px 0 #000000;
+    box-shadow: 0px 0px 23px 0 #000000;
+  }
+
+  .jumbotron_title{
+    font-size: 1.8em;
+    font-family: 'Bungee', cursive;
+      text-align: center;
+
+
+  }
+  .jumpotron_icon_holder{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+  }
+
+  .svg_icons_primary{
+    transform: scale(1.7);
+  }
+  .svg_icons_secondary{
+    transform: scale(1.2);
+  }
+
+
+
+
+  /*UX*/
+  .home_serch_icon{
+    animation: home_serch_icon 5s ease-out 0s infinite;
+  }
+  @keyframes home_serch_icon{
+    0%{
+      transform: scale(1.7)
+    }
+    10%{
+      transform: scale(1.9)
+    }
+    20%{
+    transform: scale(1.6)
+    }
+    30%{
+      transform: scale(1.9)
+    }
+    40%{
+      transform: scale(1.6)
+    }
+    50%{
+      transform: scale(1.9)
+    }
+    60%{
+      transform: scale(1.7)
+    }
+    100%{
+      transform: scale(1.7)
+    }
+  }
+  .home_uparrow_icon{
+    animation: home_uparrow_icon 5s ease-out 0s infinite;
+  }
+  @keyframes home_uparrow_icon{
+    0%{
+      transform: translateY(0px) scale(1.7)
+    }
+    10%{
+      transform: translateY(-10px) scale(1.7)
+    }
+    20%{
+    transform: translateY(0px) scale(1.7)
+    }
+    30%{
+      transform: translateY(-10px) scale(1.7)
+    }
+    40%{
+      transform: translateY(0px) scale(1.7)
+    }
+    50%{
+      transform: translateY(-10px) scale(1.7)
+    }
+    60%{
+      transform: translateY(0px) scale(1.7)
+    }
+    100%{
+      transform: translateY(0px) scale(1.7)
+    }
+  }
+
+  .home_loop_icon{
+    animation: home_loop_icon 5s ease-out 0s infinite;
+  }
+  @keyframes home_loop_icon{
+    0%{
+      transform: rotate(0deg) scale(1.7)
+    }
+    10%{
+      transform: rotate(-180deg) scale(1.7)
+    }
+    20%{
+    transform: rotate(0deg) scale(1.7)
+    }
+    30%{
+      transform: rotate(-180deg) scale(1.7)
+    }
+    40%{
+      transform: rotate(0deg) scale(1.7)
+    }
+    50%{
+      transform: rotate(-180deg) scale(1.7)
+    }
+    60%{
+      transform: rotate(0deg) scale(1.7)
+    }
+    100%{
+      transform: rotate(0deg) scale(1.7)
+    }
+  }
+  .come_in_place_from_bottom{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 700ms;
+  }
+
+  .pop_up_from_middle{
+    transform: scale(1);
+    opacity: 1;
+    transition: 700ms;
+  }
+  .fade_in{
+    opacity: 1;
+    transition: 700ms;
+  }
+
+
+  /*UX*/
+}
+
+
+@media only screen and (min-width : 375px) {
+
+}
+
+
+
+
+@media only screen and (min-width : 414px) {
+
+}
+
+
+
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+
+}
+
+
+
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation: portrait) {
+  .app_main_title{
+    margin: 1em 180px;
+    padding: 0;
+  }
+  .app_introduction,.jumpotron_explanation{
+    padding: 0 18%;
+  }
+  .jumpotron_section_container{
+    width: 60%
+  }
+}
+
+
+
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation: landscape) {
+  .app_main_title {
+    margin: 1em 350px;
+    padding: 0;
+  }
+  .app_introduction,.jumpotron_explanation{
+    padding: 0 18%;
+  }
+  .jumpotron_section_container{
+    width: 60%
+  }
+
+}
+
+
+@media only screen and (min-width : 1024px) {
+  .separator_wraper{
+    display: none;
+  }
+  .container_row_to_colum{
+    display: flex;
+    justify-content: space-around;
+  }
+  .jumpotron_explanation{
+    padding: 0 8%;
+  }
+  .jumpotron_section_container {
+    width: 90%;
+  }
+  .jumbotron_title{
+    margin: 0;
+  }
+  .app_main_title{
+    font-size:3.6em;
+  }
+  .app_main_title {
+    margin: 0em 300px;
+  }
+}
+
+@media only screen and (min-width : 1280px) {
+  .app_introduction{
+    padding: 0 30%;
+  }
+  .app_main_title {
+    margin: 0em 410px;
+    padding: 0;
+  }
+  .jumbotron_title,.jumpotron_icon_holder {
+    margin: 20px 0;
+  }
+  .separator_wraper, .separator_wraper_line{
+    margin: 50px 0;
+  }
+
+}
+
+
+
+@media only screen and (min-width : 1366px) {
+
+}
+
+
+
+
+
+@media only screen and (min-width : 1900px) {
+
+
+
+}
