@@ -1,0 +1,186 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  outline: none;
+}
+html{
+      -webkit-font-smoothing: antialiased;
+}
+@media only screen and (min-width : 320px) {
+  .page_title{
+    font-size: 1.5em;
+    padding:0 5%;
+    margin-bottom: 0;
+  }
+
+  .page_title_minior{
+    font-size: 1.2em;
+    padding:0 5%;
+    color: rgb(110, 110, 110);
+  }
+  .page_title_minior span{
+    font-size: 1.3em;
+    color: #222;
+  }
+  .results_container{
+    padding: 0 5%;
+  }
+  .results_container p {
+    color: rgb(74, 72, 72);
+  }
+  .results_container p span{
+    color: #222;
+  }
+  .table{
+    padding-left: 5%
+  }
+  .table tbody tr,
+  .table tbody tr td{
+    display: block;
+    position: relative;
+  }
+  .table tbody tr td{
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.55em;
+  }
+
+  .table tbody tr td span{
+    padding-left:  30px
+  }
+  .card_holder_wraper{
+    display: block;
+    position: relative;
+  }
+  .card_holder{
+    margin-bottom: 20px;
+  }
+  .viewed_card{
+    background-color: rgb(175, 175, 175);
+  }
+  .time{
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  .graph_container{
+    width: 100%;
+  }
+  .rated_responses{
+    padding-bottom: .3em;
+    font-size: 1.5em;
+    line-height: 1.334;
+    margin: 5px 0 ;
+  }
+  .result_single{
+    padding-bottom: .5em;
+    border-bottom: 2px solid #ffc107;
+  }
+  .div_flex_center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .expandable_wraper{
+    border-top: 1px solid #ffd042;
+    border-bottom:  1px solid #ffd042;
+  }
+  .result_values_wraper div {
+    font-size: 1.3em;
+    font-weight: bolder;
+  }
+  .total_score_p{
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: rgb(144, 144, 144);
+  }
+  .total_score_p span {
+    font-size: 1.1em;
+    color: rgb(54, 54, 54);
+
+  }
+  .points_span{
+    font-size: 0.9em;
+    color: rgb(144, 144, 144);
+  }
+  .help_message_p{
+    padding: 2%;
+    font-size: 1.1em;
+
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .page_title{
+    font-size: 1.5em;
+    padding:10px 5%;
+    text-align: center;
+  }
+
+  .page_title_minior{
+    font-size: 1.2em;  text-align: center;
+    padding:10px 5%;
+    color: rgb(110, 110, 110);
+  }
+  .page_title_minior span{
+    font-size: 1.3em;
+  }
+  .card_holder {
+    width: 900px;
+    margin-top: 30px;
+  }
+  .card_holder_wraper{
+    display: flex;
+    justify-content: center;
+  }
+  .table{
+    padding-left: 0
+  }
+  .table tbody tr{
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+   .table tbody tr td{
+    display: inline;
+    font-size: 1.05em;
+    line-height: 1.55em;
+    margin-right: 100px;
+  }
+  .table tbody tr td span{
+    padding-left:  30px
+  }
+  .td_bg5{
+    background-color: rgb(102, 255, 168);
+  }
+  .td_bg4{
+    background-color: rgb(188, 252, 252);
+  }
+  .td_bg3{
+    background-color: white;
+  }
+  .td_bg2{
+    background-color: rgb(251, 198, 143);
+  }
+  .td_bg1{
+    background-color: rgb(251, 126, 126);
+  }
+  .td_bg0{
+    background-color: rgb(185, 185, 185);
+  }
+  .results_container{
+    padding: 0;
+    text-align: center;
+  }
+  .SelectField_container{
+    width: 40%;
+  }
+  .SelectField_container_all{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+}
