@@ -1,0 +1,611 @@
+&nbsp;
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:60|PT+Sans|Josefin+Sans|Signika|Exo" rel="stylesheet">
+<script src="math.js"></script>
+
+&nbsp;
+<div class="shown">
+<p class="registration">Welcome to The Five C Model Online Assessment</p>
+<img src="http://www.digitimaging.com/wp-content/uploads/2017/04/Five-C-Model_lores_banner.png" class="FiveCImagesMain">
+
+<section class="C5Explanation">The Five C Model is an organizational development tool that is holistic by nature and flexible by design. Its five elements: Concept, Connecting, Collateral, Communication and Consolidation fit together to create a strategic and structural overview that adds operational value and increased profitability in almost every business proposition.
+&nbsp;
+&nbsp;
+This assessment is designed to encourage critical thinking and inspire continuous improvement. Please answer in the context of your business as a whole, not you as an individual. If you work quickly, honestly and don't overthink it, you'll be done in less than 5 minutes.
+<br /> &nbsp;<br />
+<strong>Rated responses:</strong>
+<br />
+1 = critical
+&nbsp;
+2 = needs development
+&nbsp;
+3 = average
+&nbsp;
+4 = good
+&nbsp;
+5 = excellent
+&nbsp;
+<span style="line-height:1">n/a = does not relate to your industry</span>
+&nbsp;
+<br /><br />
+</section>
+<p class="registration" id="registration">Before we start, please share a few details</p>
+
+<form name="MainForm" method="post" autocomplete="off">
+<div id="nameErrorMsg" class="C5Explanation" style="color:red;text-align:center;padding:0px">Please enter your name.</div>
+<input id="NameInput" class="NameInput" name="name" type="text" placeholder="your name" maxlength="30">
+<div id="emailErrorMsg" class="C5Explanation" style="color:red;text-align:center;padding:0px;clear:both">Please enter a valid email address.</div>
+<input id="EmailInput" class="EmailInput" name="email" type="email" placeholder="email" maxlength="50">
+<div id="industryErrorMsg" class="C5Explanation" style="color:red;text-align:center;padding:0px;clear:both">Please select / enter a valid industry.</div>
+<select id="IndustryInput" class="IndDropDown" name="industry">
+<option value="">industry</option>
+<option value="Accountants">Accountants</option>
+<option value="Administration">Administration</option>
+<option value="Advertising">Advertising</option>
+<option value="Agriculture">Agriculture</option>
+<option value="Animal Welfare ">Animal Welfare</option>
+<option value="Architecture">Architecture</option>
+<option value="Audio Visual">Audio Visual</option>
+<option value="Automotive">Automotive</option>
+<option value="Aviation">Aviation</option>
+<option value="Business Associations">Business Associations</option>
+<option value="Business Services">Business Services</option>
+<option value="Charity">Charity</option>
+<option value="Chemicals">Chemicals</option>
+<option value="Childcare">Childcare</option>
+<option value="Civil Service / Public Office">Civil Service / Public Office</option>
+<option value="Communications">Communications</option>
+<option value="Computing">Computing</option>
+<option value="Computing - Games">Computing - Games</option>
+<option value="Computing - Software">Computing - Software</option>
+<option value="Construction">Construction</option>
+<option value="Consulting Services">Consulting Services</option>
+<option value="Consumer Services">Consumer Services</option>
+<option value="Craft">Craft</option>
+<option value="Creative Arts">Creative Arts</option>
+<option value="Data Management">Data Management</option>
+<option value="Design">Design</option>
+<option value="Education">Education</option>
+<option value="Electronics">Electronics</option>
+<option value="Energy">Energy</option>
+<option value="Engineering">Engineering</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Environment">Environment</option>
+<option value="Farming">Farming</option>
+<option value="Financial">Financial</option>
+<option value="Food Production &amp; Sales">Food Production &amp; Sales</option>
+<option value="Forestry">Forestry</option>
+<option value="Furniture">Furniture</option>
+<option value="Health &amp; Fitness">Health &amp; Fitness</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Home Maker">Home Maker</option>
+<option value="Horticulture">Horticulture</option>
+<option value="Hospitality - cafe/bars/restaurants">Hospitality - café / bars / restaurants</option>
+<option value="Hotels">Hotels</option>
+<option value="HR &amp; Recruitment ">HR &amp; Recruitment</option>
+<option value="Human Rights">Human Rights</option>
+<option value="Industrial">Industrial</option>
+<option value="Internet">Internet</option>
+<option value="IT &amp; Network Services">IT &amp; Network Services</option>
+<option value="Legal Services">Legal Services</option>
+<option value="Logistics">Logistics</option>
+<option value="Manufacturing">Manufacturing</option>
+<option value="Marine">Marine</option>
+<option value="Marketing">Marketing</option>
+<option value="Mechanical">Mechanical</option>
+<option value="Media">Media</option>
+<option value="Medical - Other">Medical - Other</option>
+<option value="Medical Practitioner">Medical Practitioner</option>
+<option value="Medical Supplies">Medical Supplies</option>
+<option value="Military">Military</option>
+<option value="Mining">Mining</option>
+<option value="Misc Business">Misc Business</option>
+<option value="Natural Resources">Natural Resources</option>
+<option value="Non-Profits">Non-Profits</option>
+<option value="Office Supplies">Office Supplies</option>
+<option value="Oil &amp; Gas">Oil &amp; Gas</option>
+<option value="Pharmaceutical">Pharmaceutical</option>
+<option value="Philanthropy">Philanthropy</option>
+<option value="Postal, Express Delivery and Couriers">Postal, Express Delivery and Couriers</option>
+<option value="Retail">Retail</option>
+<option value="Retired ">Retired </option>
+<option value="Sales">Sales</option>
+<option value="Science">Science</option>
+<option value="Security">Security</option>
+<option value="Special Trades / Contractors">Special Trades / Contractors</option>
+<option value="Sporting Supplies">Sporting Supplies</option>
+<option value="Telecom Services &amp; Equipment">Telecom Services &amp; Equipment</option>
+<option value="Textiles">Textiles</option>
+<option value="Tobacco">Tobacco</option>
+<option value="Tourism">Tourism</option>
+<option value="Transportation">Transportation</option>
+<option value="Travel">Travel</option>
+<option value="Venture Capital">Venture Capital</option>
+<option value="Veterinary Clinic &amp; Services">Veterinary Clinic &amp; Services</option>
+<option value="Waste Management">Waste Management</option>
+<option value="Other">Other (pls tell us below)</option>
+</select>
+<input id="OtherIndustryInput" class="NameInput" name="otherindustry" type="text" placeholder="your industry" maxlength="30">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<div>
+<div class="FAQ1">FAQ?</div>
+<div class="HelpButton">HELP</div>
+<div class="FAQ1P"><strong>How will my information be used?</strong>
+<br/><br/>
+<p class="HowWillMyInfoBeUsedP">
+Your responses will allow us to develop education in competition-critical areas of the business environment; customer experience, communication, systems, processes and procedures - collected data will be used to inform future updates and create industry-level analysis</p>
+<br/><br/>
+<strong>Confidentiality</strong>
+<br/><br/><p class="ConfidentialityP" >
+All response data is confidential, stored in a secure, password-protected storage area and only seen by the Five C Model Team for further development of the assessment and model</p>
+</div>
+<p class="HelpExplanation">If you experience any problems please return to HELP, click and comment to let us know - we will then invite you back when we know it's fixed - thanks for the support!</p>
+
+<div class="textAreaHidden"><textarea class="HelpField" name="HelpField" id="HelpField" rows="12" cols="60"></textarea></div>
+</div>
+&nbsp;
+&nbsp;
+
+<hr class="style18">
+
+<div class="QA">
+<p class="H1tag">Concept</p>
+<p class="QuestionTags">1) How clear and easy to find are your company mission and values?</p>
+<p id="hid1">critical</p>
+<p id="hid2">needs development</p>
+<p id="hid3">average</p>
+<p id="hid4">good</p>
+<p id="hid5">excellent</p>
+<p id="hidNA1">not applicable</p>
+
+<div class="Q1A">
+<div id="b11" class="b11">1</div>
+<div id="b12" class="b12">2</div>
+<div id="b13" class="b13">3</div>
+<div id="b14" class="b14">4</div>
+<div id="b15" class="b15">5</div>
+<div id="na1" class="na1">n/a</div>
+</div>
+<p class="QuestionTags">2) How consistently do business websites, social media and physical marketing materials align to your mission and values?</p>
+<p id="hid6">critical</p>
+<p id="hid7">needs development</p>
+<p id="hid8">average</p>
+<p id="hid9">good</p>
+<p id="hid10">excellent</p>
+<p id="hidNA2">not applicable</p>
+
+<div class="Q1A">
+<div id="b21" class="b21">1</div>
+<div id="b22" class="b22">2</div>
+<div id="b23" class="b23">3</div>
+<div id="b24" class="b24">4</div>
+<div id="b25" class="b25">5</div>
+<div id="na2" class="na2">n/a</div>
+</div>
+<p class="QuestionTags">3) How effective is your business at using multimedia and other visual tools to show customers who you are and what you do?</p>
+<p id="hid11">critical</p>
+<p id="hid12">needs development</p>
+<p id="hid13">average</p>
+<p id="hid14">good</p>
+<p id="hid15">excellent</p>
+<p id="hidNA3">not applicable</p>
+
+<div class="Q1A">
+<div id="b31" class="b31">1</div>
+<div id="b32" class="b32">2</div>
+<div id="b33" class="b33">3</div>
+<div id="b34" class="b34">4</div>
+<div id="b35" class="b35">5</div>
+<div id="na3" class="na3">n/a</div>
+</div>
+<p class="QuestionTags">4) In your marketplace, how unique is your business concept?</p>
+<p id="hid16">critical</p>
+<p id="hid17">needs development</p>
+<p id="hid18">average</p>
+<p id="hid19">good</p>
+<p id="hid20">excellent</p>
+<p id="hidNA4">not applicable</p>
+
+<div class="Q1A">
+<div id="b41" class="b41">1</div>
+<div id="b42" class="b42">2</div>
+<div id="b43" class="b43">3</div>
+<div id="b44" class="b44">4</div>
+<div id="b45" class="b45">5</div>
+<div id="na4" class="na4">n/a</div>
+</div>
+<p class="QuestionTags">5) Please rate the perception a customer might form when first experiencing your business?</p>
+<p id="hid21">critical</p>
+<p id="hid22">needs development</p>
+<p id="hid23">average</p>
+<p id="hid24">good</p>
+<p id="hid25">excellent</p>
+<p id="hidNA5">not applicable</p>
+
+<div class="Q1A">
+<div id="b51" class="b51">1</div>
+<div id="b52" class="b52">2</div>
+<div id="b53" class="b53">3</div>
+<div id="b54" class="b54">4</div>
+<div id="b55" class="b55">5</div>
+<div id="na5" class="na5">n/a</div>
+</div>
+</div>
+
+<hr class="style18">
+
+<div class="QA">
+<p class="H1tag">Connecting</p>
+<p class="QuestionTags">1) How confident are you that consistent, constructive messages are being presented throughout your business?</p>
+<p id="hid26">critical</p>
+<p id="hid27">needs development</p>
+<p id="hid28">average</p>
+<p id="hid29">good</p>
+<p id="hid30">excellent</p>
+<p id="hidNA6">not applicable</p>
+
+<div class="Q1A">
+<div id="b61" class="b61">1</div>
+<div id="b62" class="b62">2</div>
+<div id="b63" class="b63">3</div>
+<div id="b64" class="b64">4</div>
+<div id="b65" class="b65">5</div>
+<div id="na6" class="na6">n/a</div>
+</div>
+<p class="QuestionTags">2) What is your level of Facebook, Twitter, LinkedIn <em>(other online community)</em> activity <em>(for example, to share industry developments, offers and team news)</em>?</p>
+<p id="hid31">critical</p>
+<p id="hid32">needs development</p>
+<p id="hid33">average</p>
+<p id="hid34">good</p>
+<p id="hid35">excellent</p>
+<p id="hidNA7">not applicable</p>
+
+<div class="Q1A">
+<div id="b71" class="b71">1</div>
+<div id="b72" class="b72">2</div>
+<div id="b73" class="b73">3</div>
+<div id="b74" class="b74">4</div>
+<div id="b75" class="b75">5</div>
+<div id="na7" class="na7">n/a</div>
+</div>
+<p class="QuestionTags">3) How effective is your business at managing its referral network <em>(in and/or out)</em>?</p>
+<p id="hid36">critical</p>
+<p id="hid37">needs development</p>
+<p id="hid38">average</p>
+<p id="hid39">good</p>
+<p id="hid40">excellent</p>
+<p id="hidNA8">not applicable</p>
+
+<div class="Q1A">
+<div id="b81" class="b81">1</div>
+<div id="b82" class="b82">2</div>
+<div id="b83" class="b83">3</div>
+<div id="b84" class="b84">4</div>
+<div id="b85" class="b85">5</div>
+<div id="na8" class="na8">n/a</div>
+</div>
+<p class="QuestionTags">4) Please describe your business response times when following up on customer enquiries <em>(for example, against a 24hr benchmark)</em>?</p>
+<p id="hid41">critical</p>
+<p id="hid42">needs development</p>
+<p id="hid43">average</p>
+<p id="hid44">good</p>
+<p id="hid45">excellent</p>
+<p id="hidNA9">not applicable</p>
+
+<div class="Q1A">
+<div id="b91" class="b91">1</div>
+<div id="b92" class="b92">2</div>
+<div id="b93" class="b93">3</div>
+<div id="b94" class="b94">4</div>
+<div id="b95" class="b95">5</div>
+<div id="na9" class="na9">n/a</div>
+</div>
+<p class="QuestionTags">5) How well does your business deal with complaints and feedback?</p>
+<p id="hid46">critical</p>
+<p id="hid47">needs development</p>
+<p id="hid48">average</p>
+<p id="hid49">good</p>
+<p id="hid50">excellent</p>
+<p id="hidNA10">not applicable</p>
+
+<div class="Q1A">
+<div id="b101" class="b101">1</div>
+<div id="b102" class="b102">2</div>
+<div id="b103" class="b103">3</div>
+<div id="b104" class="b104">4</div>
+<div id="b105" class="b105">5</div>
+<div id="na10" class="na10">n/a</div>
+</div>
+</div>
+
+<hr class="style18">
+
+<div class="QA">
+<p class="H1tag">Collateral</p>
+<p class="QuestionTags">1) When you use physical literature and multimedia tools how consistent is the customer/user experience?</p>
+<p id="hid51">critical</p>
+<p id="hid52">needs development</p>
+<p id="hid53">average</p>
+<p id="hid54">good</p>
+<p id="hid55">excellent</p>
+<p id="hidNA11">not applicable</p>
+
+<div class="Q1A">
+<div id="b111" class="b111">1</div>
+<div id="b112" class="b112">2</div>
+<div id="b113" class="b113">3</div>
+<div id="b114" class="b114">4</div>
+<div id="b115" class="b115">5</div>
+<div id="na11" class="na11">n/a</div>
+</div>
+<p class="QuestionTags">2) How would you rate the overall visual quality and impact of the multimedia tools you use?</p>
+<p id="hid56">critical</p>
+<p id="hid57">needs development</p>
+<p id="hid58">average</p>
+<p id="hid59">good</p>
+<p id="hid60">excellent</p>
+<p id="hidNA12">not applicable</p>
+
+<div class="Q1A">
+<div id="b121" class="b121">1</div>
+<div id="b122" class="b122">2</div>
+<div id="b123" class="b123">3</div>
+<div id="b124" class="b124">4</div>
+<div id="b125" class="b125">5</div>
+<div id="na12" class="na12">n/a</div>
+</div>
+<p class="QuestionTags">3) How effective are you at collecting customer insight to develop information sharing tools?</p>
+<p id="hid61">critical</p>
+<p id="hid62">needs development</p>
+<p id="hid63">average</p>
+<p id="hid64">good</p>
+<p id="hid65">excellent</p>
+<p id="hidNA13">not applicable</p>
+
+<div class="Q1A">
+<div id="b131" class="b131">1</div>
+<div id="b132" class="b132">2</div>
+<div id="b133" class="b133">3</div>
+<div id="b134" class="b134">4</div>
+<div id="b135" class="b135">5</div>
+<div id="na13" class="na13">n/a</div>
+</div>
+<p class="QuestionTags">4) For larger transactions, how is your ability to provide borrower-friendly payment options <em>(for example, leasing or finance)</em>?</p>
+<p id="hid66">critical</p>
+<p id="hid67">needs development</p>
+<p id="hid68">average</p>
+<p id="hid69">good</p>
+<p id="hid70">excellent</p>
+<p id="hidNA14">not applicable</p>
+
+<div class="Q1A">
+<div id="b141" class="b141">1</div>
+<div id="b142" class="b142">2</div>
+<div id="b143" class="b143">3</div>
+<div id="b144" class="b144">4</div>
+<div id="b145" class="b145">5</div>
+<div id="na14" class="na14">n/a</div>
+</div>
+<p class="QuestionTags">5) Please rate how well aligned the style and quality of your business documentation is to your overall concept?</p>
+<p id="hid71">critical</p>
+<p id="hid72">needs development</p>
+<p id="hid73">average</p>
+<p id="hid74">good</p>
+<p id="hid75">excellent</p>
+<p id="hidNA15">not applicable</p>
+
+<div class="Q1A">
+<div id="b151" class="b151">1</div>
+<div id="b152" class="b152">2</div>
+<div id="b153" class="b153">3</div>
+<div id="b154" class="b154">4</div>
+<div id="b155" class="b155">5</div>
+<div id="na15" class="na15">n/a</div>
+</div>
+</div>
+
+<hr class="style18">
+
+<div class="QA">
+<p class="H1tag">Communication</p>
+<p class="QuestionTags">1) When it comes to what your customer really wants, how in-tune is your business?</p>
+<p id="hid76">critical</p>
+<p id="hid77">needs development</p>
+<p id="hid78">average</p>
+<p id="hid79">good</p>
+<p id="hid80">excellent</p>
+<p id="hidNA16">not applicable</p>
+
+<div class="Q1A">
+<div id="b161" class="b161">1</div>
+<div id="b162" class="b162">2</div>
+<div id="b163" class="b163">3</div>
+<div id="b164" class="b164">4</div>
+<div id="b165" class="b165">5</div>
+<div id="na16" class="na16">n/a</div>
+</div>
+<p class="QuestionTags">2) How well do you share customer insights across your business?</p>
+<p id="hid81">critical</p>
+<p id="hid82">needs development</p>
+<p id="hid83">average</p>
+<p id="hid84">good</p>
+<p id="hid85">excellent</p>
+<p id="hidNA17">not applicable</p>
+
+<div class="Q1A">
+<div id="b171" class="b171">1</div>
+<div id="b172" class="b172">2</div>
+<div id="b173" class="b173">3</div>
+<div id="b174" class="b174">4</div>
+<div id="b175" class="b175">5</div>
+<div id="na17" class="na17">n/a</div>
+</div>
+<p class="QuestionTags">3) Assumption can affect what we share and how we share it, please rate how your business manages assumptions?</p>
+<p id="hid86">critical</p>
+<p id="hid87">needs development</p>
+<p id="hid88">average</p>
+<p id="hid89">good</p>
+<p id="hid90">excellent</p>
+<p id="hidNA18">not applicable</p>
+
+<div class="Q1A">
+<div id="b181" class="b181">1</div>
+<div id="b182" class="b182">2</div>
+<div id="b183" class="b183">3</div>
+<div id="b184" class="b184">4</div>
+<div id="b185" class="b185">5</div>
+<div id="na18" class="na18">n/a</div>
+</div>
+<p class="QuestionTags">4) How structured and consistent is your business approach to internal and external communications?</p>
+<p id="hid91">critical</p>
+<p id="hid92">needs development</p>
+<p id="hid93">average</p>
+<p id="hid94">good</p>
+<p id="hid95">excellent</p>
+<p id="hidNA19">not applicable</p>
+
+<div class="Q1A">
+<div id="b191" class="b191">1</div>
+<div id="b192" class="b192">2</div>
+<div id="b193" class="b193">3</div>
+<div id="b194" class="b194">4</div>
+<div id="b195" class="b195">5</div>
+<div id="na19" class="na19">n/a</div>
+</div>
+<p class="QuestionTags">5) How would you rate your business leaders at taking responsibility for effective communication?</p>
+<p id="hid96">critical</p>
+<p id="hid97">needs development</p>
+<p id="hid98">average</p>
+<p id="hid99">good</p>
+<p id="hid100">excellent</p>
+<p id="hidNA20">not applicable</p>
+
+<div class="Q1A">
+<div id="b201" class="b201">1</div>
+<div id="b202" class="b202">2</div>
+<div id="b203" class="b203">3</div>
+<div id="b204" class="b204">4</div>
+<div id="b205" class="b205">5</div>
+<div id="na20" class="na20">n/a</div>
+</div>
+</div>
+
+<hr class="style18">
+
+<div class="QA">
+<p class="H1tag">Consolidation</p>
+<p class="QuestionTags">1) How skillful is your business at creating a positive impression in the mind of a customer?</p>
+<p id="hid101">critical</p>
+<p id="hid102">needs development</p>
+<p id="hid103">average</p>
+<p id="hid104">good</p>
+<p id="hid105">excellent</p>
+<p id="hidNA21">not applicable</p>
+
+<div class="Q1A">
+<div id="b211" class="b211">1</div>
+<div id="b212" class="b212">2</div>
+<div id="b213" class="b213">3</div>
+<div id="b214" class="b214">4</div>
+<div id="b215" class="b215">5</div>
+<div id="na21" class="na21">n/a</div>
+</div>
+<p class="QuestionTags">2) How important are post-negotiation activities seen to be within your business?</p>
+<p id="hid106">critical</p>
+<p id="hid107">needs development</p>
+<p id="hid108">average</p>
+<p id="hid109">good</p>
+<p id="hid110">excellent</p>
+<p id="hidNA22">not applicable</p>
+
+<div class="Q1A">
+<div id="b221" class="b221">1</div>
+<div id="b222" class="b222">2</div>
+<div id="b223" class="b223">3</div>
+<div id="b224" class="b224">4</div>
+<div id="b225" class="b225">5</div>
+<div id="na22" class="na22">n/a</div>
+</div>
+<p class="QuestionTags">3) How consistent are you as a business when it comes to consolidation <em>(for example, do you all follow the same process)</em>?</p>
+<p id="hid111">critical</p>
+<p id="hid112">needs development</p>
+<p id="hid113">average</p>
+<p id="hid114">good</p>
+<p id="hid115">excellent</p>
+<p id="hidNA23">not applicable</p>
+
+<div class="Q1A">
+<div id="b231" class="b231">1</div>
+<div id="b232" class="b232">2</div>
+<div id="b233" class="b233">3</div>
+<div id="b234" class="b234">4</div>
+<div id="b235" class="b235">5</div>
+<div id="na23" class="na23">n/a</div>
+</div>
+<p class="QuestionTags">4) How well does your business manage the internal negative perceptions of its staff <em>(for example, high product cost or low service quality)</em>?</p>
+<p id="hid116">critical</p>
+<p id="hid117">needs development</p>
+<p id="hid118">average</p>
+<p id="hid119">good</p>
+<p id="hid120">excellent</p>
+<p id="hidNA24">not applicable</p>
+
+<div class="Q1A">
+<div id="b241" class="b241">1</div>
+<div id="b242" class="b242">2</div>
+<div id="b243" class="b243">3</div>
+<div id="b244" class="b244">4</div>
+<div id="b245" class="b245">5</div>
+<div id="na24" class="na24">n/a</div>
+</div>
+<p class="QuestionTags">5) What are the chances your customers will tell their family and friends about you?</p>
+<p id="hid121">critical</p>
+<p id="hid122">needs development</p>
+<p id="hid123">average</p>
+<p id="hid124">good</p>
+<p id="hid125">excellent</p>
+<p id="hidNA25">not applicable</p>
+
+<div class="Q1A">
+<div id="b251" class="b251">1</div>
+<div id="b252" class="b252">2</div>
+<div id="b253" class="b253">3</div>
+<div id="b254" class="b254">4</div>
+<div id="b255" class="b255">5</div>
+<div id="na25" class="na25">n/a</div>
+</div>
+</div>
+
+<hr class="style18">
+
+<span id="ptest19"></span>
+<span id="ptest20"></span>
+<p class="PrhBeforeSubmit">Please answer all questions before you submit - thank you!</p>
+
+<div><input type="submit" name="submitbtn" id="submitbtn" value="submit" class="ValidateButton"></div>
+</form></div>
+<div class="hiddenAll">
+<p id="note"></p>
+<p id="suvet" style="display:inline-block;"></p>
+<p id="suvet2"></p>
+&nbsp;
+<p id="suvet3"></p>
+&nbsp;
+<p id="suvet4"></p>
+&nbsp;
+<p id="suvet5"></p>
+&nbsp;
+<p id="suvet6"></p>
+&nbsp;
+<p id="SideWayImg"></p>
+
+<div id="ImageForOtput" style="display:inline-block;position:relative;left:300px;"></div>
+&nbsp;
+<p id="suvet7"></p>
+
+</div>
