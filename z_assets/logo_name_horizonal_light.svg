@@ -1,0 +1,34 @@
+<svg width="1100" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="1102" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <g stroke="null" id="svg_52">
+   <g stroke="null" transform="matrix(0.9330226495964272,0,0,0.9873289576511831,-17882.430022014996,-13187.231210353882) " id="svg_50">
+    <title stroke="null" transform="translate(-59.76237106323242,-16.755456924438477) translate(-51.7940559387207,-41.888641357421875) translate(155.38217163085938,-33.51091384887695) translate(6.142801761627197,22.340608596801758) translate(-27.122770309448242,17.872875213623047) translate(19188.123046875,0) translate(0,13412.4990234375) ">background</title>
+    <rect stroke="null" fill="none" id="svg_48" height="402" width="1102" y="13359.557495" x="19209.968823"/>
+    <g stroke="null" display="none" id="svg_46">
+     <rect stroke="null" fill="url(#gridpattern)" stroke-width="0" y="13360.557495" x="19210.968823" height="400" width="580" id="svg_47"/>
+    </g>
+   </g>
+   <g stroke="null" transform="matrix(0.9330226495964272,0,0,0.9873289576511831,-17882.430022014996,-13187.231210353882) " id="svg_51">
+    <title stroke="null" transform="translate(-59.76237106323242,-16.755456924438477) translate(-51.7940559387207,-41.888641357421875) translate(155.38217163085938,-33.51091384887695) translate(6.142801761627197,22.340608596801758) translate(-27.122770309448242,17.872875213623047) translate(19188.123046875,0) translate(0,13412.4990234375) ">Layer 1</title>
+    <rect stroke="#000" id="svg_45" height="339.999998" width="39" y="13394.057497" x="19393.468823" stroke-width="0" fill="#ffeeea"/>
+    <rect stroke="#000" id="svg_44" height="205.999997" width="39" y="13438.057496" x="19445.718823" stroke-width="0" fill="#ffffff"/>
+    <rect stroke="#000" id="svg_43" height="205.999997" width="39" y="13423.057496" x="19340.718823" stroke-width="0" fill="#FFDBD2"/>
+    <rect stroke="#000" id="svg_42" height="104.000001" width="39" y="13499.057496" x="19497.718823" stroke-width="0" fill="#ffffff"/>
+    <rect stroke="#000" id="svg_41" height="104.000001" width="39" y="13463.057496" x="19288.718823" stroke-width="0" fill="#ffbfbf"/>
+    <text stroke="#000" fill="#ffffff" stroke-width="0" x="6746.824388" y="4346.818987" id="svg_40" font-size="24" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(3.188740726830587,0,0,3.2613058249680273,-1968.0196295803635,-597.0333846459276) " font-weight="bold" font-style="normal">Georgi Dimitranov</text>
+   </g>
+  </g>
+ </g>
+</svg>
