@@ -21,11 +21,10 @@ const Unit = props => (
         &nbsp; | &nbsp;
         {props.data.vote_count}
         </p>
-        {(props.data.release_date || props.data.first_air_date) ?
+        {/* {(props.data.release_date || props.data.first_air_date) &&
           <p className="release_date_p">
             {beautifyDate(props.isTV ? props.data.first_air_date : props.data.release_date)}
-          </p>
-          : null}
+          </p>} */}
         {(props.data.pick) ?
           <p className="release_date_p  creator_pick">CREATOR'S PICK</p>
             : null}
