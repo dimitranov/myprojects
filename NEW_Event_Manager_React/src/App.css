@@ -1,0 +1,212 @@
+.header {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.32);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); }
+  .header p {
+    font-family: 'Cookie', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    color: #eee;
+    margin: 0;
+    padding-top: 10px; }
+
+hr {
+  border-bottom: 2px solid rgba(68, 68, 68, 0.2);
+  border-top: none; }
+
+.add_button_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px; }
+
+.events_list_wraper_parent {
+  width: 100%;
+  height: initial;
+  display: flex;
+  justify-content: center; }
+  .events_list_wraper_parent .events_list_wraper {
+    width: 600px; }
+    .events_list_wraper_parent .events_list_wraper .events_list_container {
+      display: block; }
+      .events_list_wraper_parent .events_list_wraper .events_list_container .event_container {
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #222;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 20px 30px;
+        font-size: 17px;
+        box-shadow: 0 2px 6px #333;
+        position: relative;
+        animation: apear 500ms ease-out 0s forwards;
+        opacity: 0; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_buttons_container {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 15px;
+          margin-bottom: 300px; }
+          .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_buttons_container button:nth-child(2) {
+            margin-left: 10px; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(2) {
+          margin: 0;
+          font-weight: 500;
+          margin-bottom: 10px;
+          font-size: 1.7em;
+          color: #222;
+          width: 75%; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(3) {
+          font-weight: 500;
+          font-size: 1em;
+          color: #3c3c3c;
+          text-transform: uppercase; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(5), .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(6) {
+          font-size: 0.9em;
+          color: #444;
+          font-style: italic;
+          margin-bottom: 5px; }
+          .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(5) span, .events_list_wraper_parent .events_list_wraper .events_list_container .event_container p:nth-child(6) span {
+            font-style: normal;
+            font-size: 1em;
+            color: #333;
+            font-weight: 500;
+            margin-left: 4px; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_edit_form_container .input {
+          padding: 8px 11px;
+          color: #111;
+          background-color: rgba(255, 255, 255, 0.56);
+          font-family: 'Roboto', sans-serif;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.36);
+          font-size: 17px;
+          margin-bottom: 6px;
+          transition: 200ms; }
+          .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_edit_form_container .input:focus {
+            transition: 200ms;
+            background-color: rgba(255, 255, 255, 0.76); }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_edit_form_container .block_input {
+          display: block; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_edit_form_container .inline_input {
+          padding: 5px 11px;
+          margin-right: 10px;
+          display: inline-block; }
+        .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_edit_form_container span {
+          margin-right: 10px; }
+
+.create_event_edit_form_container {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #222;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px 30px;
+  font-size: 17px;
+  box-shadow: 0 2px 6px #333;
+  position: relative;
+  animation: apear 500ms ease-out 0s forwards;
+  opacity: 0;
+  margin-bottom: 300px; }
+  .create_event_edit_form_container .input {
+    padding: 8px 11px;
+    color: #111;
+    background-color: rgba(255, 255, 255, 0.56);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    font-size: 17px;
+    margin-bottom: 6px;
+    transition: 200ms; }
+    .create_event_edit_form_container .input:focus {
+      transition: 200ms;
+      background-color: rgba(255, 255, 255, 0.76); }
+  .create_event_edit_form_container .block_input {
+    width: 60%;
+    display: block; }
+  .create_event_edit_form_container .inline_input {
+    padding: 5px 11px;
+    margin-right: 10px;
+    display: inline-block; }
+  .create_event_edit_form_container span {
+    margin-right: 10px; }
+  .create_event_edit_form_container .create_event_buttons_container {
+    display: flex;
+    justify-content: center; }
+    .create_event_edit_form_container .create_event_buttons_container button {
+      margin: 10px; }
+
+.app {
+  position: relative; }
+  .app .error_modal_container {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.43);
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    animation: apear 300ms ease-out 0s forwards;
+    opacity: 0; }
+    .app .error_modal_container div {
+      height: 100px;
+      width: 500px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+      position: relative; }
+      .app .error_modal_container div p {
+        color: black;
+        font-size: 1.1em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        font-family: "Roboto", sans-serif; }
+      .app .error_modal_container div button {
+        position: absolute;
+        margin: 10px;
+        bottom: 0;
+        right: 0; }
+
+@keyframes apear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@media only screen and (max-width: 480px) {
+  .events_list_wraper_parent .events_list_wraper {
+    width: 390px; }
+  .event_buttons_container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column; }
+    .event_buttons_container button {
+      align-self: center; }
+      .event_buttons_container button:nth-child(2) {
+        margin-left: 0px !important;
+        margin-top: 10px; }
+  .app .error_modal_container div {
+    width: 320px; } }
+
+@media only screen and (max-width: 375px) {
+  .events_list_wraper_parent .events_list_wraper {
+    width: 350px; }
+  .app .error_modal_container div {
+    width: 320px; } }
+
+@media only screen and (max-width: 320px) {
+  .events_list_wraper_parent .events_list_wraper .events_list_container .event_container {
+    padding: 20px 10px; }
+  .events_list_wraper_parent .events_list_wraper .events_list_container .event_container .event_buttons_container {
+    padding: 8px; }
+  .events_list_wraper_parent .events_list_wraper {
+    width: 300px; }
+  .app .error_modal_container div {
+    width: 290px; } }
