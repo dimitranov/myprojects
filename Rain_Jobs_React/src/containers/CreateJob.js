@@ -3,14 +3,9 @@ import {connect} from 'react-redux';
 import {fillJobs , } from '../actions/jobsActions';
 import { ref } from '../helpers/config';
 import MenuBar from '../components/MenuBar';
+import TextDataEditor from '../components/TextDataEditor';
+import InputPreview from '../components/InputPreview';
 
-const InputField = ({name,title,err,onChange,type}) => (
-  <div style={{display:"block"}}>
-    <p>{title}</p>
-    <input type={type?type:"text"} id="title" name={name} onChange={onChange}/>
-    <p>{err}</p>
-  </div>
-)
 
 const TextAreaField = ({name,title,err,onChange}) => (
   <div style={{display:"block"}}>
@@ -40,6 +35,10 @@ const KeyWordsSelector = ({handleInputChange,addFunction,keyWordArray,removeFunc
   }
 }
 
+
+
+
+
 const JobTypeSelect = ({jobType,handleChange}) => (
   <select value={jobType} onChange={handleChange}>
     <option value="fulltime">Full Time (8h)</option>
@@ -54,20 +53,18 @@ class CreateJob extends Component {
     super(props);
     this.timeout =  0;
     this.state = {
-      title: "",
       keywords: [],
-      currentKeyword: "",
+      text_data: [],
       jobType: "fulltime",
-      salaryMin: null,
-      salaryMax: null,
-      salarySingle: null,
+      currentKeyword: "",
+      title: "",
+      salaryMin: "",
+      salaryMax: "",
+      salarySingle: "",
       location: "",
       compoanyPicture: "",
       compoanyName: "",
-      company: "",
-      description: "",
-      requirements: "",
-      message: "",
+      sallaryType: true, // true - sigle / flase - double
     }
   }
 
@@ -81,6 +78,10 @@ class CreateJob extends Component {
         }, 1500);
       }
     );
+  }
+
+  handleInputChangeCLEAR = (e) => {
+    this.setState({[e.target.name]:e.target.value});
   }
 
   handleJobTypeSelection = (e) => {
@@ -100,21 +101,85 @@ class CreateJob extends Component {
 
   removeKeyword = (keyword) => {
     let tempKeywordArray = this.state.keywords;
-    let indexOfKeyword = tempKeywordArray.indexOf(keyword);
-    tempKeywordArray.splice(indexOfKeyword, 1);
+    tempKeywordArray.splice(tempKeywordArray.indexOf(keyword), 1);
     this.setState({keywords:tempKeywordArray});
+  }
+
+  addUnitInTextData = (inputValue, callback) => {
+    let text_data_populated = this.state.text_data;
+    text_data_populated.push(inputValue);
+    this.setState({text_data: text_data_populated}, callback());
+  }
+
+  removeUnitInTextData = (unit, callback) => {
+    let text_data_populated = this.state.text_data;
+    text_data_populated.splice(text_data_populated.indexOf(unit), 1);
+    this.setState({text_data: text_data_populated}, callback());
+  }
+
+  toggleTitleEdit = () => {
+    this.setState({title_saved: !this.state.title_saved})
+  }
+
+  toggleSalaryType = (e) => {
+    this.setState({sallaryType: !this.state.sallaryType})
   }
 
   render(){
     return (
       <div>
-        <InputField name="title" title="title" onChange={this.handleInputChange} />
-        <InputField name="salaryMin" title="salary min" type="number" onChange={this.handleInputChange}/>
-        <InputField name="salaryMax" title="salary max" type="number" onChange={this.handleInputChange}/>
-        <InputField name="salarySingle" title="salary single" type="number" onChange={this.handleInputChange}/>
+        <div style={{height:"100px"}}></div>
+
+        <InputPreview
+          value={this.state.title}
+          handleChange={this.handleInputChangeCLEAR}
+          name="title"
+          holder="Title"
+        />
+        <button onClick={()=>this.toggleSalaryType()}>toggle to {this.state.sallaryType?"double":"sigle"}</button>
+        {this.state.sallaryType && <InputPreview
+          value={this.state.salarySingle}
+          handleChange={this.handleInputChangeCLEAR}
+          name="salarySingle"
+          holder="Salary"
+        />}
+        {!this.state.sallaryType &&
+          <div>
+            <InputPreview
+              value={this.state.salaryMax}
+              handleChange={this.handleInputChangeCLEAR}
+              name="salaryMax"
+              holder="salaryMax"
+            />
+            <InputPreview
+              value={this.state.salaryMin}
+              handleChange={this.handleInputChangeCLEAR}
+              name="salaryMin"
+              holder="salaryMin"
+            />
+          </div>}
+        <InputPreview
+          value={this.state.location}
+          handleChange={this.handleInputChangeCLEAR}
+          name="location"
+          holder="Location"
+        />
+        <InputPreview
+          value={this.state.compoanyName}
+          handleChange={this.handleInputChangeCLEAR}
+          name="compoanyName"
+          holder="compoanyName"
+        />
+        <InputPreview
+          value={this.state.compoanyPicture}
+          handleChange={this.handleInputChangeCLEAR}
+          name="compoanyPicture"
+          holder="compoanyPicture"
+          isPicture={true}
+        />
 
         <KeyWordsSelector
-          handleInputChange={this.handleInputChange}
+          handleInputChange={this.handleInputChangeCLEAR}
           keyWordArray={this.state.keywords}
           currentKeyword={this.state.currentKeyword}
           addFunction={this.addKeyword}
@@ -123,15 +188,11 @@ class CreateJob extends Component {
 
         <JobTypeSelect jobType={this.state.jobType} handleChange={this.handleJobTypeSelection}/>
 
-        <InputField name="location" title="location" onChange={this.handleInputChange}/>
-        <InputField name="compoanyName" title="compoany name" onChange={this.handleInputChange}/>
-        <InputField name="compoanyPicture" title="compoany picture" onChange={this.handleInputChange}/>
-        <TextAreaField name="company" title="company" onChange={this.handleInputChange}/>
-        <TextAreaField name="description" title="description" onChange={this.handleInputChange}/>
-        <TextAreaField name="requirements" title="requirements" onChange={this.handleInputChange}/>
-        <TextAreaField name="message" title="message" onChange={this.handleInputChange}/>
+
+        <TextDataEditor textDataArray={this.state.text_data} addFunction={this.addUnitInTextData} removeFunction={this.removeUnitInTextData}/>
+
         <button onClick={()=>this.props.createJob(this.state)}>Create Job</button>
-        <button onClick={()=>this.props.save_for_preview(this.state)}>Preview</button>
+        <button onClick={()=>this.props.save_for_preview(this.state)}>Previewe</button>
       </div>
     )
   }

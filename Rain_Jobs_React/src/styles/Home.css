@@ -1,0 +1,78 @@
+.content_container_omega {
+  margin: 0 auto; }
+
+.job_count_p {
+  text-align: center;
+  font: 1em 'Open Sans', sans-serif;
+  color: #1d5458; }
+
+.job_list_container_parent {
+  height: initial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.job_list_container {
+  width: 100%; }
+  .job_list_container a {
+    text-decoration: none;
+    display: block;
+    width: 100%; }
+    .job_list_container a .job {
+      width: 100%;
+      height: initial;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.41);
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      background-color: #fff; }
+      .job_list_container a .job .job_text {
+        width: 70%;
+        height: inherit; }
+        .job_list_container a .job .job_text .title, .job_list_container a .job .job_text .salaryMin_salaryMax, .job_list_container a .job .job_text .salarySingle, .job_list_container a .job .job_text .date, .job_list_container a .job .job_text .location {
+          text-align: center;
+          margin: 0;
+          text-align: left;
+          padding-left: 10px; }
+        .job_list_container a .job .job_text .title, .job_list_container a .job .job_text .salaryMin_salaryMax, .job_list_container a .job .job_text .salarySingle, .job_list_container a .job .job_text .location {
+          margin: 5px 0; }
+        .job_list_container a .job .job_text .title {
+          font: 1em 'Open Sans', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #1a767d; }
+        .job_list_container a .job .job_text .salaryMin_salaryMax,
+        .job_list_container a .job .job_text .salarySingle {
+          color: rgba(0, 0, 0, 0.53);
+          font-style: italic;
+          font: 0.9em 'Open Sans', sans-serif;
+          font-weight: bold; }
+        .job_list_container a .job .job_text .location {
+          font-size: 15px;
+          color: #888; }
+      .job_list_container a .job .job_image_container {
+        width: 30%;
+        height: inherit; }
+        .job_list_container a .job .job_image_container img {
+          width: auto;
+          height: auto;
+          max-height: 60px;
+          max-width: 90%;
+          float: right;
+          margin-right: 10px; }
+        .job_list_container a .job .job_image_container .date {
+          text-align: right;
+          padding-right: 10px;
+          margin-top: 5px;
+          font: 0.7em 'Open Sans', sans-serif;
+          font-style: italic;
+          color: #888; }
+
+@media only screen and (max-width: 768px) {
+  .job_list_container {
+    width: 95%; } }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import {connect} from 'react-redux';
 import MenuBar from '../components/MenuBar';
 import CreateJob from './CreateJob';
+import { firebaseAuth } from '../helpers/config';
 import PreviewCreateJob from './PreviewCreateJob';
 import { ref } from '../helpers/config';
 
@@ -40,6 +41,7 @@ class CreateJobPage extends Component {
         {
           id: Math.floor(Math.random()*1000000+1) ,
           date: formatDate(new Date().toString()),
+          uid: firebaseAuth().currentUser.uid,
         }
       )
     );

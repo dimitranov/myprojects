@@ -56,15 +56,17 @@ class App extends Component {
   render() {
     const { authed } = this.props;
     return (
-      <Router>
-        <Switch>
-          <ConditionalRoute path="/" authed={authed} exact component={Home} elseComponent={GetStarted} />
-          <LoginRoute authed={authed} path={process.env.PUBLIC_URL+'/login'} exact component={Login} />
-          <LoginRoute authed={authed} path="/singup" exact component={SingUp} />
-          <Route path="/job/:jobID" exact component={Job} />
-          <PrivateRoute path="/create/:type" authed={authed} exact component={CreateJobPage} />
-        </Switch>
-      </Router>
+      <div className="omega_container">
+        <Router>
+          <Switch>
+            <ConditionalRoute path="/" authed={authed} exact component={Home} elseComponent={GetStarted} />
+            <LoginRoute authed={authed} path={process.env.PUBLIC_URL+'/login'} exact component={Login} />
+            <LoginRoute authed={authed} path="/singup" exact component={SingUp} />
+            <Route path="/job/:jobID" exact component={Job} />
+            <PrivateRoute path="/create/:type" authed={authed} exact component={CreateJobPage} />
+          </Switch>
+        </Router>
+      </div>
     );
   }
 }

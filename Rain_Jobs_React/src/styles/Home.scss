@@ -1,0 +1,120 @@
+.content_container_omega {
+  //  width: 960px;
+  margin: 0 auto;
+}
+.job_count_p{
+  text-align: center;
+  font: 1em 'Open Sans', sans-serif;
+  color: #1d5458;
+}
+.job_list_container_parent{
+  height: initial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.job_list_container {
+  width:100%;
+
+  a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    .job {
+      width: 100%;
+      height: initial;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.41);
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      background-color: #fff;
+
+      .job_text {
+        width: 70%;
+        height: inherit;
+        .title, .salaryMin_salaryMax,.salarySingle, .date, .location {
+            text-align: center;
+            margin: 0;
+            text-align: left;
+            padding-left: 10px;
+
+        }
+        .title, .salaryMin_salaryMax,.salarySingle,.location {
+          margin: 5px 0;
+        }
+        .title {
+          //font-family: "Open Sans", sans-serif;
+          font: 1em 'Open Sans', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          color: #1a767d;
+        }
+
+        .salaryMin_salaryMax,
+        .salarySingle {
+          color: rgba(0, 0, 0, 0.53);
+          //font-size: 14px;
+          font-style: italic;
+          font: 0.9em 'Open Sans', sans-serif;
+          font-weight: bold;
+        }
+
+        .location {
+          font-size: 15px;
+          color: #888;
+        }
+      }
+
+      .job_image_container {
+        width: 30%;
+        height: inherit;
+
+        img {
+          width: auto;
+          height: auto;
+          max-height: 60px;
+          max-width: 90%;
+          float: right;
+          margin-right: 10px;
+        }
+        .date {
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 5px;
+            font: 0.7em 'Open Sans', sans-serif;
+            font-style: italic;
+            color: #888;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+  .job_list_container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

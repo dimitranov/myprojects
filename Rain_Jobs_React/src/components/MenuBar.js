@@ -3,19 +3,22 @@ import {connect} from 'react-redux';
 import {  Link } from "react-router-dom";
 import {authed_false} from '../actions/userActions';
 import PropTypes from 'prop-types';
-
+import "../styles/MenuBar.css";
 
 const DropDownMenu = ({authed,logoutFunction}) => (
   <div className="menu_burger_containter">
   	<ul className="burger_ul">
-  		<li>MENU</li>
+  		<li>HOME</li>
   		<UserStatusButton authed={authed} logoutFunction={logoutFunction}/>
+      <Link to="/create/company-job"><li>CREATE JOB APPLICATION</li></Link>
   	</ul>
   </div>
 )
 
 const UserStatusButton = ({authed,logoutFunction}) =>
-authed ? <button onClick={()=>logoutFunction()}><li>Logout</li></button> : <Link to='/login'><li>Login</li></Link>
+authed ?
+<li onClick={()=>logoutFunction()}>Logout</li> :
+<Link to='/login'><li>Login</li></Link>
 
 
 
@@ -33,11 +36,9 @@ class MenuBar extends Component {
 
   render(){
     return (
-      <div>
+      <div className="header_container">
         <header>
-        	<div className="hamburger_nav" onClick={()=>this.setState({menuOpened:!this.state.menuOpened})}><span className="nav_span">H</span></div>
-        	<div className="header_rd"><p>logo</p></div>
-        	<div className="header_img">serch</div>
+        	<div className="hamburger_nav" onClick={()=>this.setState({menuOpened:!this.state.menuOpened})}><span className="nav_span"></span></div>
         </header>
         {this.state.menuOpened && <DropDownMenu authed={this.props.authed} logoutFunction={this.props.logout}/>}
       </div>

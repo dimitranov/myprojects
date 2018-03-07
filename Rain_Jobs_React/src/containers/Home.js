@@ -2,28 +2,9 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fillJobs} from '../actions/jobsActions';
 import { firebaseAuth , ref } from '../helpers/config';
-import {  Link } from "react-router-dom";
 import MenuBar from '../components/MenuBar';
-
-const JobLink =  ({job}) => (
-  <div style={{border:"1px solid black"}}>
-    <Link to={`/job/${job.id}`}>
-      <div>
-        <p>{job.title}</p>
-        <p>{job.location}</p>
-        {job.date && <p>{job.date}</p>}
-        {job.salaryMin && <p>From {job.salaryMin} to {job.salaryMax}</p>}
-        {job.salarySingle && <p>Salary: {job.salarySingle}</p>}
-        <p>Salary: {job.compoanyName}</p>
-        <img alt="" src={job.compoanyPicture}/>
-      </div>
-    </Link>
-  </div>
-)
-
-
-
-
+import JobsList from '../components/JobsList';
+import "../styles/Home.css"
 
 const formatDate = (newDate) => {
   //let newDate = new Date().toString()
@@ -77,16 +58,17 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content_container_omega">
         <MenuBar/>
-        <p><Link to="/create/company-job">company-job</Link></p>
-        <p><Link to="/create/personal-offer">personal-offer</Link></p>
-         {this.props.jobList?
+        <div style={{height:"60px"}}></div>
+        {this.props.jobList && <p className="job_count_p">Found {this.props.jobList.length} jobs</p>}
+        <JobsList data={this.props.jobList}/>
+         {/* {this.props.jobList?
           this.props.jobList.map((job,index) => {
             return <JobLink job={job} key={index}/>
           }).reverse():
         <p>loadin...</p>
-        }
+        } */}
       </div>
     );
   }

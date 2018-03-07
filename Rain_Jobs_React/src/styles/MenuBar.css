@@ -1,0 +1,98 @@
+.header_container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 40px;
+  /*Habmurger*/ }
+  .header_container header {
+    height: 40px;
+    width: inherit;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.89); }
+  .header_container .hamburger_nav {
+    float: left;
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+    z-index: 100;
+    justify-content: center;
+    align-items: center; }
+  .header_container .nav_span {
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: #27e8d6;
+    position: relative;
+    transition: all 200ms ease; }
+    .header_container .nav_span:before, .header_container .nav_span:after {
+      position: absolute;
+      width: 20px;
+      content: "";
+      transition: all 400ms ease;
+      height: 3px;
+      border-radius: 2px;
+      background: #27e8d6; }
+    .header_container .nav_span:after {
+      top: -8px;
+      left: 2px; }
+    .header_container .nav_span:before {
+      top: 8px;
+      right: 2px; }
+    .header_container .nav_span.nav_active {
+      transition: all 200ms ease;
+      width: 0px; }
+    .header_container .nav_span.nav_active:before {
+      transition: all 400ms ease;
+      width: 25px;
+      transform: rotate(45deg);
+      right: -12.5px;
+      top: 0px; }
+    .header_container .nav_span.nav_active:after {
+      transition: all 400ms ease;
+      width: 25px;
+      transform: rotate(-45deg);
+      left: -12.5px;
+      top: 0px; }
+  .header_container .menu_burger_containter {
+    display: block;
+    top: 40px;
+    width: 100%;
+    position: fixed;
+    background-color: black; }
+  .header_container .burger_ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 90%;
+    position: relative; }
+  .header_container .burger_ul li {
+    height: 40px;
+    padding-top: 13px;
+    color: white;
+    padding-left: 22px;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box; }
+  .header_container .burger_ul a {
+    text-decoration: none;
+    color: #fff; }
+  .header_container .burger_ul:first_child {
+    height: 55px;
+    padding-top: 10px;
+    padding-left: 0;
+    text-align: center; }
+  .header_container .burger_ul li a {
+    text-align: left; }
+
+@media only screen and (max-width: 768px) {
+  .header_container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 40px; } }

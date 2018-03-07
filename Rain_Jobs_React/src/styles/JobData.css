@@ -1,0 +1,35 @@
+.job_data_container {
+  padding: 0 4%; }
+  .job_data_container .job_data_info_section {
+    margin: 60px 0 30px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #dadada; }
+    .job_data_container .job_data_info_section p {
+      margin: 3px 0;
+      font: 600 0.9em 'Open Sans', sans-serif;
+      color: rgba(0, 0, 0, 0.76); }
+      .job_data_container .job_data_info_section p span {
+        color: rgba(0, 0, 0, 0.47); }
+  .job_data_container .compoanyPicture {
+    margin: 0 auto;
+    display: block;
+    max-width: 50%;
+    max-height: 100px; }
+  .job_data_container .title {
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font: 600 1.7em 'Open Sans', sans-serif;
+    color: black; }
+  .job_data_container h2 {
+    font: 600 1.5em 'Open Sans', sans-serif;
+    color: #222; }
+  .job_data_container p {
+    text-align: left;
+    font: 400 1em/1.5em 'Open Sans', sans-serif;
+    color: #333;
+    margin: 25px 0; }
+  .job_data_container .listitem {
+    font: 400 1em/1.5em 'Open Sans', sans-serif;
+    padding-left: 5px; }
+    .job_data_container .listitem span {
+      padding-left: 10px; }
