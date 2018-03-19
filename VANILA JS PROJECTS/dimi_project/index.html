@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Pinyon+Script|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Awaxio Style</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <style type="text/css">
+    body {
+
+      font: 1em 'Raleway', sans-serif;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      padding: 0;
+      background: rgb(56, 42, 74);
+      background: linear-gradient(135deg, rgba(38, 27, 54, 1) 0%, rgba(36, 57, 84, 1) 21%, rgba(88, 47, 49, 1) 40%, rgba(124, 103, 69, 1) 60%, rgba(21, 24, 10, 1) 100%);
+    }
+
+    .story {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid rgba(194, 194, 194, 0.8);
+      background-color: rgba(251, 251, 251, 0.05);
+      transition: 500ms;
+    }
+
+    .story:hover {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 0.5em 0 rgba(0, 0, 0, 0.84);
+      background-color: rgba(251, 251, 251, 0.2);
+      transition: 500ms;
+      cursor: pointer;
+    }
+
+    .story .img_container {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .story .img_container img {
+      width: 100%;
+    }
+
+    .story_text {
+      padding: 20px;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    header {
+      height: 500px;
+      position: relative;
+    }
+
+    header div {
+      display: flex;
+      justify-content: center;
+    }
+
+    header div .h1 {
+      width: 400px;
+      margin-top: 200px;
+      text-align: center;
+      font-size: 90px;
+      margin-bottom: 20px;
+      font-family: 'Pinyon Script', cursive;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    header>p {
+      text-align: center;
+      padding: 0 200px;
+      line-height: 2em;
+    }
+    .sticky_header{
+      position: fixed;
+      top: 0;
+      height: 50px;
+      width: 100%;
+      z-index: 6000000000;
+      background-color: rgba(0, 0, 0, 0.44);
+    }
+    .sticky_header nav a{
+      color: rgba(255, 255, 255, 0.79);
+      text-decoration: none;
+      font: 1.2em 'Raleway', sans-serif;
+    }
+    .content_container {
+      display: block;
+      margin: 0 auto;
+      width: 960px;
+    }
+
+    .centrated_img_container {
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 100px;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    /* .centrated_img_container div {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(201, 165, 138, 0.1);
+      height: 400px;
+    }
+
+    .centrated_img_container img {
+      width: 100%;
+    } */
+
+    .learn_more_main_BTN {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .storyes_container {
+      width: 100%;
+      margin-top: 40px;
+    }
+    .learn_more_main_BTN{
+      background-color: rgba(255,255, 255, 0);
+      padding: 8px 16px;
+      font: 1.2em 'Raleway', sans-serif;
+      border: 1px  solid white;
+      color: white;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: 400ms;
+    }
+    .learn_more_main_BTN:hover{
+      transition: 400ms;
+      background-color: rgba(255,255, 255, 0.1);
+    }
+    .explore{
+      text-align: center;
+      font: 2.2em 'Raleway', sans-serif;
+      margin: 50px;
+    }
+    .explore_under{
+      text-align: center;
+      font: 1.1em 'Raleway', sans-serif;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 100px;
+    }
+    footer{
+      height: 100px;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    footer p{
+      text-align: center;
+      font-size: 1em;
+      padding-top: 2.2em;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="sticky_header">
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#">EXPLORE</a>
+        <a href="#">CONTACTS</a>
+      </nav>
+    </div>
+    <div>
+      <p class="h1">Awaxio</p>
+    </div>
+    <p>Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring. <br>The future belongs to those who believe in the beauty of their dreams.</p>
+  </header>
+  <div class="content_container">
+    <div class="container">
+      <div class="centrated_img_container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://static.asiachan.com/Bae.Suzy.full.153358.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2014/08/20/18/08/woman-422706_960_720.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/12/08/00/43/spring-landscape-1081972_960_720.jpg" alt="Third slide">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="learn_more_main_BTN">Learn More</button>
+      <p class="explore">Explore the unseen</p>
+      <p class="explore_under">Dive deep into the storys of many unique humans.</p>
+      <div class="storyes_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="story">
+                <div class="img_container">
+                  <img src="portrait.jpg" alt="">
+                </div>
+                <p class="story_text">The soul that sees beauty may sometimes walk alone.</p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="girl.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="balloon.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="story">
+                <div class="img_container">
+                  <img src="woman.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="https://cdn.pixabay.com/photo/2018/03/16/21/22/folk-3232560_960_720.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="https://cdn.pixabay.com/photo/2018/02/25/14/22/beautiful-3180671_960_720.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="story">
+                <div class="img_container">
+                  <img src="people.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="https://cdn.pixabay.com/photo/2018/03/17/14/30/portrait-3234191_960_720.jpg" alt="">
+                </div>
+                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; Awaxio 2018</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
