@@ -15,162 +15,208 @@
   <link href="https://fonts.googleapis.com/css?family=Pinyon+Script|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Awaxio Style</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <style type="text/css">
-    body {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+  }
 
-      font: 1em 'Raleway', sans-serif;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0;
-      padding: 0;
-      background: rgb(56, 42, 74);
-      background: linear-gradient(135deg, rgba(38, 27, 54, 1) 0%, rgba(36, 57, 84, 1) 21%, rgba(88, 47, 49, 1) 40%, rgba(124, 103, 69, 1) 60%, rgba(21, 24, 10, 1) 100%);
-    }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .story {
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 30px;
-      border: 1px solid rgba(194, 194, 194, 0.8);
-      background-color: rgba(251, 251, 251, 0.05);
-      transition: 500ms;
-    }
+  body {
+    font: 1em 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 0;
+    background: rgb(56, 42, 74);
+    background: -webkit-linear-gradient(315deg, rgba(38, 27, 54, 1) 0%, rgba(36, 57, 84, 1) 21%, rgba(88, 47, 49, 1) 40%, rgba(124, 103, 69, 1) 60%, rgba(21, 24, 10, 1) 100%);
+    background: -o-linear-gradient(315deg, rgba(38, 27, 54, 1) 0%, rgba(36, 57, 84, 1) 21%, rgba(88, 47, 49, 1) 40%, rgba(124, 103, 69, 1) 60%, rgba(21, 24, 10, 1) 100%);
+    background: linear-gradient(135deg, rgba(38, 27, 54, 1) 0%, rgba(36, 57, 84, 1) 21%, rgba(88, 47, 49, 1) 40%, rgba(124, 103, 69, 1) 60%, rgba(21, 24, 10, 1) 100%);
+  }
 
-    .story:hover {
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 0.5em 0 rgba(0, 0, 0, 0.84);
-      background-color: rgba(251, 251, 251, 0.2);
-      transition: 500ms;
-      cursor: pointer;
-    }
+  .story {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid rgba(194, 194, 194, 0.8);
+    background-color: rgba(251, 251, 251, 0.05);
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+  }
 
-    .story .img_container {
-      max-width: 100%;
-      overflow: hidden;
-    }
+  .story:hover {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 0.5em 0 rgba(0, 0, 0, 0.47);
+                box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 0.5em 0 rgba(0, 0, 0, 0.47);
+    background-color: rgba(251, 251, 251, 0.2);
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+    cursor: pointer;
+  }
 
-    .story .img_container img {
-      width: 100%;
-    }
+  .story .img_container {
+    max-width: 100%;
+    overflow: hidden;
+  }
 
-    .story_text {
-      padding: 20px;
-      font-family: 'Raleway', sans-serif;
-    }
+  .story .img_container img {
+    width: 100%;
+  }
 
-    header {
-      height: 500px;
-      position: relative;
-    }
+  .story_text {
+    padding: 20px;
+        margin-bottom: 0;
+    font-family: 'Raleway', sans-serif;
+  }
 
-    header div {
-      display: flex;
-      justify-content: center;
-    }
+  header {
+    height: 500px;
+    position: relative;
+  }
 
-    header div .h1 {
-      width: 400px;
-      margin-top: 200px;
-      text-align: center;
-      font-size: 90px;
-      margin-bottom: 20px;
-      font-family: 'Pinyon Script', cursive;
-      color: rgba(255, 255, 255, 0.9);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-    }
+  header div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 
-    header>p {
-      text-align: center;
-      padding: 0 200px;
-      line-height: 2em;
-    }
-    .sticky_header{
-      position: fixed;
-      top: 0;
-      height: 50px;
-      width: 100%;
-      z-index: 6000000000;
-      background-color: rgba(0, 0, 0, 0.44);
-    }
-    .sticky_header nav a{
-      color: rgba(255, 255, 255, 0.79);
-      text-decoration: none;
-      font: 1.2em 'Raleway', sans-serif;
-    }
-    .content_container {
+  header div .h1 {
+    width: 400px;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: 20px;
+    font-family: 'Pinyon Script', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  }
+
+  header>p {
+    text-align: center;
+    padding: 0 200px;
+    line-height: 2em;
+  }
+
+  .sticky_header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 6000000000;
+    background-color: rgba(0, 0, 0, 0.44);
+  }
+  .sticky_header nav{
+    position: absolute;
+      left: 0;
+      padding-top: 5px;
+      padding-left: 20px;
+  }
+  .sticky_header nav span{
+    font-size: 3.1em;
+font-family: 'Pinyon Script', cursive;
+margin-right: 20px;
+  }
+  .sticky_header nav a {
+        color: rgba(255, 255, 255, 0.65);
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+font: 1.2em 'Raleway', sans-serif;
+-webkit-transition: 300ms;
+-o-transition: 300ms;
+transition: 300ms;
+  }
+  .sticky_header nav a.active_a{
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+.sticky_header nav a:hover{
+  color: rgba(255, 255, 255, 0.95);
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+  .content_container {
+    display: block;
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  .centrated_img_container {
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    position: relative;
+    border-radius: 10px;
+
+  }
+  .centrated_img_container:after {
+      content: '';
       display: block;
-      margin: 0 auto;
-      width: 960px;
-    }
-
-    .centrated_img_container {
-      height: 400px;
-      overflow: hidden;
-      margin-bottom: 100px;
-      position: relative;
-      border-radius: 10px;
-    }
-
-    /* .centrated_img_container div {
       position: absolute;
-      width: 100%;
       top: 0;
-      left: 0;
-      background: rgba(201, 165, 138, 0.1);
-      height: 400px;
-    }
-
-    .centrated_img_container img {
       width: 100%;
-    } */
+      height: 100%;
+      -webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.88);
+              box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.88);
+  }
+  .learn_more_main_BTN {
+    display: block;
+    margin: 0 auto;
+  }
 
-    .learn_more_main_BTN {
-      display: block;
-      margin: 0 auto;
-    }
+  .storyes_container {
+    width: 100%;
+    margin-top: 40px;
+  }
 
-    .storyes_container {
-      width: 100%;
-      margin-top: 40px;
-    }
-    .learn_more_main_BTN{
-      background-color: rgba(255,255, 255, 0);
-      padding: 8px 16px;
-      font: 1.2em 'Raleway', sans-serif;
-      border: 1px  solid white;
-      color: white;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: 400ms;
-    }
-    .learn_more_main_BTN:hover{
-      transition: 400ms;
-      background-color: rgba(255,255, 255, 0.1);
-    }
-    .explore{
-      text-align: center;
-      font: 2.2em 'Raleway', sans-serif;
-      margin: 50px;
-    }
-    .explore_under{
-      text-align: center;
-      font: 1.1em 'Raleway', sans-serif;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 100px;
-    }
-    footer{
-      height: 100px;
-      width: 100%;
-      position: relative;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    footer p{
-      text-align: center;
-      font-size: 1em;
-      padding-top: 2.2em;
-      box-sizing: border-box;
-    }
+  .learn_more_main_BTN {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 14px 35px;      font: 1.2em 'Raleway', sans-serif;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+  }
+
+  .learn_more_main_BTN:hover {
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .explore {
+    text-align: center;
+    font: 3em 'Raleway', sans-serif;
+    margin: 50px;
+  }
+
+  .explore_under {
+    text-align: center;
+  font: 1.6em 'Raleway', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 70px;
+  }
+  footer {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  footer a{
+    color: rgba(255, 255, 255, 0.58);
+  }
+  footer a:hover{
+    color: rgba(255, 255, 255, 1);
+  }
   </style>
 </head>
 
@@ -178,15 +224,16 @@
   <header>
     <div class="sticky_header">
       <nav>
-        <a href="#">HOME</a>
-        <a href="#">EXPLORE</a>
+        <span>A</span>
+        <a href="#" class="active_a">HOME</a>
+        <a href="">EXPLORE</a>
         <a href="#">CONTACTS</a>
       </nav>
     </div>
     <div>
       <p class="h1">Awaxio</p>
     </div>
-    <p>Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring. <br>The future belongs to those who believe in the beauty of their dreams.</p>
+    <p>Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring. The future belongs to those who believe in the beauty of their dreams.</p>
   </header>
   <div class="content_container">
     <div class="container">
@@ -214,62 +261,69 @@
             <div class="col-md-4">
               <div class="story">
                 <div class="img_container">
-                  <img src="portrait.jpg" alt="">
+                  <img src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg" alt="">
                 </div>
                 <p class="story_text">The soul that sees beauty may sometimes walk alone.</p>
 
               </div>
               <div class="story">
                 <div class="img_container">
-                  <img src="girl.jpg" alt="">
+                  <img src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">Colors are the smiles of nature.</p>
 
               </div>
               <div class="story">
                 <div class="img_container">
-                  <img src="balloon.jpg" alt="">
+                  <img src="https://cdn.pixabay.com/photo/2018/03/07/17/15/balloon-3206530_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">The future belongs to those who believe in the beauty of their dreams.</p>
 
               </div>
             </div>
             <div class="col-md-4">
               <div class="story">
                 <div class="img_container">
-                  <img src="woman.jpg" alt="">
+                  <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/people-2563491_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">A girl should be two things: classy and fabulous. </p>
 
               </div>
               <div class="story">
                 <div class="img_container">
                   <img src="https://cdn.pixabay.com/photo/2018/03/16/21/22/folk-3232560_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">Luck is great, but most of life is hard work.</p>
 
               </div>
               <div class="story">
                 <div class="img_container">
                   <img src="https://cdn.pixabay.com/photo/2018/02/25/14/22/beautiful-3180671_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">Like most girls, I fantasized about being some sort of a princess. </p>
 
               </div>
             </div>
             <div class="col-md-4">
               <div class="story">
                 <div class="img_container">
-                  <img src="people.jpg" alt="">
+                  <img src="https://cdn.pixabay.com/photo/2016/12/30/10/03/wings-1940245_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">Let your life lightly dance on the edges of Time like dew on the tip of a leaf.</p>
 
               </div>
               <div class="story">
                 <div class="img_container">
                   <img src="https://cdn.pixabay.com/photo/2018/03/17/14/30/portrait-3234191_960_720.jpg" alt="">
                 </div>
-                <p class="story_text">JHdf8usafuiasiufahsouf asifhaisj foasf oiasfoahsifas oifapsof a</p>
+                <p class="story_text">When I was a little boy I did not, of course, trouble much about my appearance. </p>
+
+              </div>
+              <div class="story">
+                <div class="img_container">
+                  <img src="https://cdn.pixabay.com/photo/2018/03/11/15/56/swan-3217128_960_720.jpg" alt="">
+                </div>
+                <p class="story_text">When I was a little boy I did not, of course, trouble much about my appearance. </p>
 
               </div>
             </div>
@@ -279,9 +333,67 @@
       </div>
     </div>
   </div>
-  <footer>
-    <p>Copyright &copy; Awaxio 2018</p>
+
+
+
+
+  <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+      <div class="container text-center text-md-left">
+          <div class="row">
+              <div class="col-md-4">
+                  <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Footer Content</h5>
+                  <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+                      amet, consectetur adipisicing elit.</p>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-2 mx-auto">
+                  <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+                  <ul class="list-unstyled">
+                      <li>
+                          <a href="#!">Link 1</a>
+                      </li>
+                      <li>
+                          <a href="#!">Link 2</a>
+                      </li>
+                      <li>
+                          <a href="#!">Link 3</a>
+                      </li>
+                      <li>
+                          <a href="#!">Link 4</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="footer-copyright py-3 text-center">
+          © 2018 Copyright: Dimitrinka Vangelova
+      </div>
+      <!--/.Copyright-->
+
   </footer>
+  <!--/.Footer-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
