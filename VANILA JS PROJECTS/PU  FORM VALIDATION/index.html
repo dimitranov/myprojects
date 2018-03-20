@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <title>Registration</title>
+    <style type="text/css" media="screen">
+      .error_span{
+        display: none;
+        color: rgb(245, 88, 88);
+      }
+    </style>
+  </head>
+  <script type="text/javascript" src="logic.js">
+  </script>
+  <body>
+    <div class="container">
+      <form  action="#" method="get" >
+        <fieldset>
+          <legend> Registration:</legend>
+
+          <label for="name">Name:</label><br>
+          <input type="text" name="name" id="name">
+          <span id="name_err" class="error_span">Please fill this field.</span>
+          <br>
+          <br>
+
+          <label for="email">Email:</label><br>
+          <input type="text" name="email" id="email">
+          <span class="error_span" id="email_err">Email structure is invalid.</span>
+          <br>
+          <br>
+
+          <p>Gender:</p>
+          <input type="radio" id="i1" name="gender" value="male" checked>
+          <label for="r1">Male</label><br>
+          <input type="radio" id="i2" name="gender" value="female">
+          <label for="r2">Female</label><br>
+
+
+          <label for="pass">Password:</label><br>
+          <input type="text" name="pass" id="pass">
+          <span id="pass_err" class="error_span">Must be between 5 and a5 charecters.</span>
+          <br>
+          <br>
+
+
+          <label for="re_pass">Re-Password:</label><br>
+          <input type="text" id="re_pass">
+          <span id="re_pass_err" class="error_span">Passwords dont match.</span>
+          <br>
+          <br>
+          <input type="submit" id="submit_btn" value="Register!">
+        </fieldset>
+      </form>
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!--
+
+name
+email
+gender
+password
+re-passowrd
+
+-->
